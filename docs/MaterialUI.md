@@ -546,18 +546,6 @@ mkRefreshIndicator :: Unit -> ReactClass RefreshIndicatorProps
 refreshIndicator :: ReactClass RefreshIndicatorProps
 ```
 
-#### `mkSelectField`
-
-``` purescript
-mkSelectField :: Unit -> ReactClass SelectFieldProps
-```
-
-#### `selectField`
-
-``` purescript
-selectField :: ReactClass SelectFieldProps
-```
-
 #### `mkSlider`
 
 ``` purescript
@@ -1059,7 +1047,7 @@ optAutoComplete_SearchText :: Option AutoCompleteOption String
 #### `optAutoComplete_ShowAllItems`
 
 ``` purescript
-optAutoComplete_ShowAllItems :: Option AutoCompleteOption Boolean
+optAutoComplete_ShowAllItems :: Option AutoCompleteOption UnknownType
 ```
 
 #### `optAutoComplete_Style`
@@ -1080,10 +1068,16 @@ optAutoComplete_TargetOrigin :: Option AutoCompleteOption UnknownType
 optAutoComplete_TouchTapCloseDelay :: Option AutoCompleteOption Number
 ```
 
+#### `optAutoComplete_TriggerUpdateOnFocus`
+
+``` purescript
+optAutoComplete_TriggerUpdateOnFocus :: Option AutoCompleteOption Boolean
+```
+
 #### `optAutoComplete_UpdateWhenFocused`
 
 ``` purescript
-optAutoComplete_UpdateWhenFocused :: Option AutoCompleteOption Boolean
+optAutoComplete_UpdateWhenFocused :: Option AutoCompleteOption UnknownType
 ```
 
 #### `AvatarOption`
@@ -1932,16 +1926,16 @@ optDatePicker_Container :: Option DatePickerOption UnknownType
 optDatePicker_DefaultDate :: Option DatePickerOption UnknownType
 ```
 
+#### `optDatePicker_DisableYearSelection`
+
+``` purescript
+optDatePicker_DisableYearSelection :: Option DatePickerOption Boolean
+```
+
 #### `optDatePicker_FormatDate`
 
 ``` purescript
 optDatePicker_FormatDate :: Option DatePickerOption EventHandlerOpt
-```
-
-#### `optDatePicker_HideToolbarYearChange`
-
-``` purescript
-optDatePicker_HideToolbarYearChange :: Option DatePickerOption Boolean
 ```
 
 #### `optDatePicker_Locale`
@@ -2007,7 +2001,7 @@ optDatePicker_ShouldDisableDate :: Option DatePickerOption EventHandlerOpt
 #### `optDatePicker_ShowYearSelector`
 
 ``` purescript
-optDatePicker_ShowYearSelector :: Option DatePickerOption Boolean
+optDatePicker_ShowYearSelector :: Option DatePickerOption UnknownType
 ```
 
 #### `optDatePicker_Style`
@@ -3246,12 +3240,6 @@ optListItem_InitiallyOpen :: Option ListItemOption Boolean
 optListItem_InnerDivStyle :: Option ListItemOption UnknownType
 ```
 
-#### `optListItem_InnerStyle`
-
-``` purescript
-optListItem_InnerStyle :: Option ListItemOption UnknownType
-```
-
 #### `optListItem_InsetChildren`
 
 ``` purescript
@@ -3664,6 +3652,12 @@ optMenu_MaxHeight :: Option MenuOption Number
 
 ``` purescript
 optMenu_Multiple :: Option MenuOption Boolean
+```
+
+#### `optMenu_OnChange`
+
+``` purescript
+optMenu_OnChange :: Option MenuOption EventHandlerOpt
 ```
 
 #### `optMenu_OnEscKeyDown`
@@ -4150,162 +4144,6 @@ optRefreshIndicator_Style :: Option RefreshIndicatorOption UnknownType
 
 ``` purescript
 optRefreshIndicator_Top :: Option RefreshIndicatorOption Number
-```
-
-#### `SelectFieldOption`
-
-``` purescript
-data SelectFieldOption :: *
-```
-
-#### `SelectFieldProps`
-
-``` purescript
-type SelectFieldProps = Foreign
-```
-
-#### `selectFieldProps`
-
-``` purescript
-selectFieldProps :: Options SelectFieldOption -> SelectFieldProps
-```
-
-#### `optSelectField_AutoWidth`
-
-``` purescript
-optSelectField_AutoWidth :: Option SelectFieldOption Boolean
-```
-
-#### `optSelectField_Children`
-
-``` purescript
-optSelectField_Children :: Option SelectFieldOption UnknownType
-```
-
-#### `optSelectField_Disabled`
-
-``` purescript
-optSelectField_Disabled :: Option SelectFieldOption Boolean
-```
-
-#### `optSelectField_ErrorStyle`
-
-``` purescript
-optSelectField_ErrorStyle :: Option SelectFieldOption UnknownType
-```
-
-#### `optSelectField_ErrorText`
-
-``` purescript
-optSelectField_ErrorText :: Option SelectFieldOption UnknownType
-```
-
-#### `optSelectField_FloatingLabelStyle`
-
-``` purescript
-optSelectField_FloatingLabelStyle :: Option SelectFieldOption UnknownType
-```
-
-#### `optSelectField_FloatingLabelText`
-
-``` purescript
-optSelectField_FloatingLabelText :: Option SelectFieldOption UnknownType
-```
-
-#### `optSelectField_FullWidth`
-
-``` purescript
-optSelectField_FullWidth :: Option SelectFieldOption Boolean
-```
-
-#### `optSelectField_HintText`
-
-``` purescript
-optSelectField_HintText :: Option SelectFieldOption UnknownType
-```
-
-#### `optSelectField_IconStyle`
-
-``` purescript
-optSelectField_IconStyle :: Option SelectFieldOption UnknownType
-```
-
-#### `optSelectField_LabelMember`
-
-``` purescript
-optSelectField_LabelMember :: Option SelectFieldOption String
-```
-
-#### `optSelectField_LabelStyle`
-
-``` purescript
-optSelectField_LabelStyle :: Option SelectFieldOption UnknownType
-```
-
-#### `optSelectField_MenuItems`
-
-``` purescript
-optSelectField_MenuItems :: Option SelectFieldOption UnknownType
-```
-
-#### `optSelectField_OnBlur`
-
-``` purescript
-optSelectField_OnBlur :: Option SelectFieldOption EventHandlerOpt
-```
-
-#### `optSelectField_OnChange`
-
-``` purescript
-optSelectField_OnChange :: Option SelectFieldOption EventHandlerOpt
-```
-
-#### `optSelectField_OnFocus`
-
-``` purescript
-optSelectField_OnFocus :: Option SelectFieldOption EventHandlerOpt
-```
-
-#### `optSelectField_SelectFieldRoot`
-
-``` purescript
-optSelectField_SelectFieldRoot :: Option SelectFieldOption UnknownType
-```
-
-#### `optSelectField_SelectedIndex`
-
-``` purescript
-optSelectField_SelectedIndex :: Option SelectFieldOption Number
-```
-
-#### `optSelectField_Style`
-
-``` purescript
-optSelectField_Style :: Option SelectFieldOption UnknownType
-```
-
-#### `optSelectField_UnderlineDisabledStyle`
-
-``` purescript
-optSelectField_UnderlineDisabledStyle :: Option SelectFieldOption UnknownType
-```
-
-#### `optSelectField_UnderlineFocusStyle`
-
-``` purescript
-optSelectField_UnderlineFocusStyle :: Option SelectFieldOption UnknownType
-```
-
-#### `optSelectField_UnderlineStyle`
-
-``` purescript
-optSelectField_UnderlineStyle :: Option SelectFieldOption UnknownType
-```
-
-#### `optSelectField_Value`
-
-``` purescript
-optSelectField_Value :: Option SelectFieldOption UnknownType
 ```
 
 #### `SliderOption`

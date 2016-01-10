@@ -1,8 +1,8 @@
 module MaterialUI where
 import Prelude (Unit, unit)
 import React (EventHandler, ReactClass)
-import Data.Options
-import Data.Foreign
+import Data.Options (class IsOption, Option, Options, opt, options)
+import Data.Foreign (Foreign)
 
 newtype EventHandlerOpt = EventHandlerOpt (EventHandler Unit)
 instance eventHandlerIsOption :: IsOption EventHandlerOpt where
@@ -142,9 +142,6 @@ raisedButton = mkRaisedButton unit
 foreign import mkRefreshIndicator :: Unit -> ReactClass RefreshIndicatorProps
 refreshIndicator :: ReactClass RefreshIndicatorProps
 refreshIndicator = mkRefreshIndicator unit
-foreign import mkSelectField :: Unit -> ReactClass SelectFieldProps
-selectField :: ReactClass SelectFieldProps
-selectField = mkSelectField unit
 foreign import mkSlider :: Unit -> ReactClass SliderProps
 slider :: ReactClass SliderProps
 slider = mkSlider unit
@@ -285,16 +282,18 @@ optAutoComplete_Open :: Option AutoCompleteOption (Boolean)
 optAutoComplete_Open = opt "open"
 optAutoComplete_SearchText :: Option AutoCompleteOption (String)
 optAutoComplete_SearchText = opt "searchText"
-optAutoComplete_ShowAllItems :: Option AutoCompleteOption (Boolean)
-optAutoComplete_ShowAllItems = opt "showAllItems"
+optAutoComplete_ShowAllItems :: Option AutoCompleteOption (UnknownType)
+optAutoComplete_ShowAllItems = opt "showAllItems" -- custom
 optAutoComplete_Style :: Option AutoCompleteOption (UnknownType)
 optAutoComplete_Style = opt "style" -- object
 optAutoComplete_TargetOrigin :: Option AutoCompleteOption (UnknownType)
 optAutoComplete_TargetOrigin = opt "targetOrigin" -- custom
 optAutoComplete_TouchTapCloseDelay :: Option AutoCompleteOption (Number)
 optAutoComplete_TouchTapCloseDelay = opt "touchTapCloseDelay"
-optAutoComplete_UpdateWhenFocused :: Option AutoCompleteOption (Boolean)
-optAutoComplete_UpdateWhenFocused = opt "updateWhenFocused"
+optAutoComplete_TriggerUpdateOnFocus :: Option AutoCompleteOption (Boolean)
+optAutoComplete_TriggerUpdateOnFocus = opt "triggerUpdateOnFocus"
+optAutoComplete_UpdateWhenFocused :: Option AutoCompleteOption (UnknownType)
+optAutoComplete_UpdateWhenFocused = opt "updateWhenFocused" -- custom
 foreign import data AvatarOption :: *
 type AvatarProps = Foreign
 avatarProps :: Options AvatarOption -> AvatarProps
@@ -549,10 +548,10 @@ optDatePicker_Container :: Option DatePickerOption (UnknownType)
 optDatePicker_Container = opt "container" -- enum
 optDatePicker_DefaultDate :: Option DatePickerOption (UnknownType)
 optDatePicker_DefaultDate = opt "defaultDate" -- object
+optDatePicker_DisableYearSelection :: Option DatePickerOption (Boolean)
+optDatePicker_DisableYearSelection = opt "disableYearSelection"
 optDatePicker_FormatDate :: Option DatePickerOption (EventHandlerOpt)
 optDatePicker_FormatDate = opt "formatDate"
-optDatePicker_HideToolbarYearChange :: Option DatePickerOption (Boolean)
-optDatePicker_HideToolbarYearChange = opt "hideToolbarYearChange"
 optDatePicker_Locale :: Option DatePickerOption (String)
 optDatePicker_Locale = opt "locale"
 optDatePicker_MaxDate :: Option DatePickerOption (UnknownType)
@@ -573,8 +572,8 @@ optDatePicker_OnTouchTap :: Option DatePickerOption (EventHandlerOpt)
 optDatePicker_OnTouchTap = opt "onTouchTap"
 optDatePicker_ShouldDisableDate :: Option DatePickerOption (EventHandlerOpt)
 optDatePicker_ShouldDisableDate = opt "shouldDisableDate"
-optDatePicker_ShowYearSelector :: Option DatePickerOption (Boolean)
-optDatePicker_ShowYearSelector = opt "showYearSelector"
+optDatePicker_ShowYearSelector :: Option DatePickerOption (UnknownType)
+optDatePicker_ShowYearSelector = opt "showYearSelector" -- custom
 optDatePicker_Style :: Option DatePickerOption (UnknownType)
 optDatePicker_Style = opt "style" -- object
 optDatePicker_TextFieldStyle :: Option DatePickerOption (UnknownType)
@@ -634,7 +633,7 @@ optDialog_TitleClassName = opt "titleClassName"
 optDialog_TitleStyle :: Option DialogOption (UnknownType)
 optDialog_TitleStyle = opt "titleStyle" -- object
 optDialog_Width :: Option DialogOption (UnknownType)
-optDialog_Width = opt "width" -- any
+optDialog_Width = opt "width" -- custom
 foreign import data DividerOption :: *
 type DividerProps = Foreign
 dividerProps :: Options DividerOption -> DividerProps
@@ -957,8 +956,6 @@ optListItem_InitiallyOpen :: Option ListItemOption (Boolean)
 optListItem_InitiallyOpen = opt "initiallyOpen"
 optListItem_InnerDivStyle :: Option ListItemOption (UnknownType)
 optListItem_InnerDivStyle = opt "innerDivStyle" -- object
-optListItem_InnerStyle :: Option ListItemOption (UnknownType)
-optListItem_InnerStyle = opt "innerStyle" -- object
 optListItem_InsetChildren :: Option ListItemOption (Boolean)
 optListItem_InsetChildren = opt "insetChildren"
 optListItem_LeftAvatar :: Option ListItemOption (UnknownType)
@@ -1087,6 +1084,8 @@ optMenu_MaxHeight :: Option MenuOption (Number)
 optMenu_MaxHeight = opt "maxHeight"
 optMenu_Multiple :: Option MenuOption (Boolean)
 optMenu_Multiple = opt "multiple"
+optMenu_OnChange :: Option MenuOption (EventHandlerOpt)
+optMenu_OnChange = opt "onChange"
 optMenu_OnEscKeyDown :: Option MenuOption (EventHandlerOpt)
 optMenu_OnEscKeyDown = opt "onEscKeyDown"
 optMenu_OnItemTouchTap :: Option MenuOption (EventHandlerOpt)
@@ -1237,56 +1236,6 @@ optRefreshIndicator_Style :: Option RefreshIndicatorOption (UnknownType)
 optRefreshIndicator_Style = opt "style" -- object
 optRefreshIndicator_Top :: Option RefreshIndicatorOption (Number)
 optRefreshIndicator_Top = opt "top"
-foreign import data SelectFieldOption :: *
-type SelectFieldProps = Foreign
-selectFieldProps :: Options SelectFieldOption -> SelectFieldProps
-selectFieldProps = options
-optSelectField_AutoWidth :: Option SelectFieldOption (Boolean)
-optSelectField_AutoWidth = opt "autoWidth"
-optSelectField_Children :: Option SelectFieldOption (UnknownType)
-optSelectField_Children = opt "children" -- node
-optSelectField_Disabled :: Option SelectFieldOption (Boolean)
-optSelectField_Disabled = opt "disabled"
-optSelectField_ErrorStyle :: Option SelectFieldOption (UnknownType)
-optSelectField_ErrorStyle = opt "errorStyle" -- object
-optSelectField_ErrorText :: Option SelectFieldOption (UnknownType)
-optSelectField_ErrorText = opt "errorText" -- node
-optSelectField_FloatingLabelStyle :: Option SelectFieldOption (UnknownType)
-optSelectField_FloatingLabelStyle = opt "floatingLabelStyle" -- object
-optSelectField_FloatingLabelText :: Option SelectFieldOption (UnknownType)
-optSelectField_FloatingLabelText = opt "floatingLabelText" -- node
-optSelectField_FullWidth :: Option SelectFieldOption (Boolean)
-optSelectField_FullWidth = opt "fullWidth"
-optSelectField_HintText :: Option SelectFieldOption (UnknownType)
-optSelectField_HintText = opt "hintText" -- node
-optSelectField_IconStyle :: Option SelectFieldOption (UnknownType)
-optSelectField_IconStyle = opt "iconStyle" -- object
-optSelectField_LabelMember :: Option SelectFieldOption (String)
-optSelectField_LabelMember = opt "labelMember"
-optSelectField_LabelStyle :: Option SelectFieldOption (UnknownType)
-optSelectField_LabelStyle = opt "labelStyle" -- object
-optSelectField_MenuItems :: Option SelectFieldOption (UnknownType)
-optSelectField_MenuItems = opt "menuItems" -- array
-optSelectField_OnBlur :: Option SelectFieldOption (EventHandlerOpt)
-optSelectField_OnBlur = opt "onBlur"
-optSelectField_OnChange :: Option SelectFieldOption (EventHandlerOpt)
-optSelectField_OnChange = opt "onChange"
-optSelectField_OnFocus :: Option SelectFieldOption (EventHandlerOpt)
-optSelectField_OnFocus = opt "onFocus"
-optSelectField_SelectFieldRoot :: Option SelectFieldOption (UnknownType)
-optSelectField_SelectFieldRoot = opt "selectFieldRoot" -- object
-optSelectField_SelectedIndex :: Option SelectFieldOption (Number)
-optSelectField_SelectedIndex = opt "selectedIndex"
-optSelectField_Style :: Option SelectFieldOption (UnknownType)
-optSelectField_Style = opt "style" -- object
-optSelectField_UnderlineDisabledStyle :: Option SelectFieldOption (UnknownType)
-optSelectField_UnderlineDisabledStyle = opt "underlineDisabledStyle" -- object
-optSelectField_UnderlineFocusStyle :: Option SelectFieldOption (UnknownType)
-optSelectField_UnderlineFocusStyle = opt "underlineFocusStyle" -- object
-optSelectField_UnderlineStyle :: Option SelectFieldOption (UnknownType)
-optSelectField_UnderlineStyle = opt "underlineStyle" -- object
-optSelectField_Value :: Option SelectFieldOption (UnknownType)
-optSelectField_Value = opt "value" -- any
 foreign import data SliderOption :: *
 type SliderProps = Foreign
 sliderProps :: Options SliderOption -> SliderProps
