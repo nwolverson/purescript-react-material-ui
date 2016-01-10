@@ -1,0 +1,71 @@
+// module MaterialUI
+
+        exports.isOptionPrimFn = function (k) {
+          return function (v) {
+            return [[k,v]];
+          };
+        };
+        exports.mkAppBar = function () { return require('material-ui/lib/app-bar'); }
+exports.mkAppCanvas = function () { return require('material-ui/lib/app-canvas'); }
+exports.mkAutoComplete = function () { return require('material-ui/lib/auto-complete'); }
+exports.mkAvatar = function () { return require('material-ui/lib/avatar'); }
+exports.mkBadge = function () { return require('material-ui/lib/badge'); }
+exports.mkBeforeAfterWrapper = function () { return require('material-ui/lib/before-after-wrapper'); }
+exports.mkFlatButtonLabel = function () { return require('material-ui/lib/buttons/flat-button-label'); }
+exports.mkCardActions = function () { return require('material-ui/lib/card/card-actions'); }
+exports.mkCardExpandable = function () { return require('material-ui/lib/card/card-expandable'); }
+exports.mkCardHeader = function () { return require('material-ui/lib/card/card-header'); }
+exports.mkCardMedia = function () { return require('material-ui/lib/card/card-media'); }
+exports.mkCardText = function () { return require('material-ui/lib/card/card-text'); }
+exports.mkCardTitle = function () { return require('material-ui/lib/card/card-title'); }
+exports.mkCard = function () { return require('material-ui/lib/card/card'); }
+exports.mkCheckbox = function () { return require('material-ui/lib/checkbox'); }
+exports.mkCircularProgress = function () { return require('material-ui/lib/circular-progress'); }
+exports.mkDatePicker = function () { return require('material-ui/lib/date-picker/date-picker'); }
+exports.mkDialog = function () { return require('material-ui/lib/dialog'); }
+exports.mkDivider = function () { return require('material-ui/lib/divider'); }
+exports.mkDropDownIcon = function () { return require('material-ui/lib/drop-down-icon'); }
+exports.mkDropDownMenu = function () { return require('material-ui/lib/DropDownMenu/DropDownMenu'); }
+exports.mkFlatButton = function () { return require('material-ui/lib/flat-button'); }
+exports.mkFloatingActionButton = function () { return require('material-ui/lib/floating-action-button'); }
+exports.mkFontIcon = function () { return require('material-ui/lib/font-icon'); }
+exports.mkGridList = function () { return require('material-ui/lib/grid-list/grid-list'); }
+exports.mkGridTile = function () { return require('material-ui/lib/grid-list/grid-tile'); }
+exports.mkIconButton = function () { return require('material-ui/lib/icon-button'); }
+exports.mkInkBar = function () { return require('material-ui/lib/ink-bar'); }
+exports.mkLeftNav = function () { return require('material-ui/lib/left-nav'); }
+exports.mkLinearProgress = function () { return require('material-ui/lib/linear-progress'); }
+exports.mkListDivider = function () { return require('material-ui/lib/lists/list-divider'); }
+exports.mkListItem = function () { return require('material-ui/lib/lists/list-item'); }
+exports.mkList = function () { return require('material-ui/lib/lists/list'); }
+exports.mkNestedList = function () { return require('material-ui/lib/lists/nested-list'); }
+exports.mkMenuDivider = function () { return require('material-ui/lib/menus/menu-divider'); }
+exports.mkMenuItem = function () { return require('material-ui/lib/menus/menu-item'); }
+exports.mkMenu = function () { return require('material-ui/lib/menus/menu'); }
+exports.mkOverlay = function () { return require('material-ui/lib/overlay'); }
+exports.mkPaper = function () { return require('material-ui/lib/paper'); }
+exports.mkRadioButtonGroup = function () { return require('material-ui/lib/radio-button-group'); }
+exports.mkRadioButton = function () { return require('material-ui/lib/radio-button'); }
+exports.mkRaisedButton = function () { return require('material-ui/lib/raised-button'); }
+exports.mkRefreshIndicator = function () { return require('material-ui/lib/refresh-indicator'); }
+exports.mkSelectField = function () { return require('material-ui/lib/select-field'); }
+exports.mkSlider = function () { return require('material-ui/lib/slider'); }
+exports.mkSnackbar = function () { return require('material-ui/lib/snackbar'); }
+exports.mkSvgIcon = function () { return require('material-ui/lib/svg-icon'); }
+exports.mkTableBody = function () { return require('material-ui/lib/table/table-body'); }
+exports.mkTableFooter = function () { return require('material-ui/lib/table/table-footer'); }
+exports.mkTableHeaderColumn = function () { return require('material-ui/lib/table/table-header-column'); }
+exports.mkTableHeader = function () { return require('material-ui/lib/table/table-header'); }
+exports.mkTableRowColumn = function () { return require('material-ui/lib/table/table-row-column'); }
+exports.mkTable = function () { return require('material-ui/lib/table/table'); }
+exports.mkTab = function () { return require('material-ui/lib/tabs/tab'); }
+exports.mkTabs = function () { return require('material-ui/lib/tabs/tabs'); }
+exports.mkTabTemplate = function () { return require('material-ui/lib/tabs/tabTemplate'); }
+exports.mkThemeWrapper = function () { return require('material-ui/lib/theme-wrapper'); }
+exports.mkTimePicker = function () { return require('material-ui/lib/time-picker/time-picker'); }
+exports.mkToggle = function () { return require('material-ui/lib/toggle'); }
+exports.mkToolbarGroup = function () { return require('material-ui/lib/toolbar/toolbar-group'); }
+exports.mkToolbarSeparator = function () { return require('material-ui/lib/toolbar/toolbar-separator'); }
+exports.mkToolbarTitle = function () { return require('material-ui/lib/toolbar/toolbar-title'); }
+exports.mkToolbar = function () { return require('material-ui/lib/toolbar/toolbar'); }
+exports.mkTooltip = function () { return require('material-ui/lib/tooltip'); }
