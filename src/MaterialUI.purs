@@ -1,18 +1,12 @@
 module MaterialUI where
 import Prelude (Unit, unit)
 import React (EventHandler, ReactClass)
-import Data.Options (class IsOption, Option, Options, opt, options)
+import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 
 newtype EventHandlerOpt = EventHandlerOpt (EventHandler Unit)
-instance eventHandlerIsOption :: IsOption EventHandlerOpt where
-  assoc k a = isOptionPrimFn k a
-foreign import isOptionPrimFn :: forall b a. (Option b a) -> a -> (Options b)
 
 newtype UnknownType = UnknownType Foreign
-instance unknownIsOption :: IsOption UnknownType where
-  assoc k a = isOptionPrimFn k a
-
 foreign import mkAppBar :: Unit -> ReactClass AppBarProps
 appBar :: ReactClass AppBarProps
 appBar = mkAppBar unit

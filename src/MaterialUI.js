@@ -1,9 +1,5 @@
 // module MaterialUI
-exports.isOptionPrimFn = function (k) {
-  return function (v) {
-    return [[k,v]];
-  };
-};
+
 exports.mkAppBar = function () { return require('material-ui/app-bar'); }
 exports.mkAppCanvas = function () { return require('material-ui/app-canvas'); }
 exports.mkAutoComplete = function () { return require('material-ui/auto-complete'); }
