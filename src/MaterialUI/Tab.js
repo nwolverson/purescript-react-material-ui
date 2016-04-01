@@ -1,3 +1,3 @@
 // module MaterialUI.Tab
 
-exports.tab = require('material-ui/lib/tabs/tab');
+exports.tabClass = require('material-ui/lib/tabs/tab');

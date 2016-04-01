@@ -1,3 +1,3 @@
 // module MaterialUI.FlatButton
 
-exports.flatButton = require('material-ui/lib/flat-button');
+exports.flatButtonClass = require('material-ui/lib/flat-button');

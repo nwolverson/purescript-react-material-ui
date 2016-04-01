@@ -1,3 +1,3 @@
 // module MaterialUI.AutoComplete
 
-exports.autoComplete = require('material-ui/lib/auto-complete');
+exports.autoCompleteClass = require('material-ui/lib/auto-complete');

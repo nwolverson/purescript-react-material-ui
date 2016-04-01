@@ -1,3 +1,3 @@
 // module MaterialUI.MenuDivider
 
-exports.menuDivider = require('material-ui/lib/menus/menu-divider');
+exports.menuDividerClass = require('material-ui/lib/menus/menu-divider');

@@ -1,3 +1,3 @@
 // module MaterialUI.NestedList
 
-exports.nestedList = require('material-ui/lib/lists/nested-list');
+exports.nestedListClass = require('material-ui/lib/lists/nested-list');

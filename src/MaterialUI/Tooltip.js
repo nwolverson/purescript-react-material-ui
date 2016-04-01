@@ -1,3 +1,3 @@
 // module MaterialUI.Tooltip
 
-exports.tooltip = require('material-ui/lib/tooltip');
+exports.tooltipClass = require('material-ui/lib/tooltip');

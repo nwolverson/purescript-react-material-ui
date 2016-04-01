@@ -1,3 +1,3 @@
 // module MaterialUI.CircularProgress
 
-exports.circularProgress = require('material-ui/lib/circular-progress');
+exports.circularProgressClass = require('material-ui/lib/circular-progress');

@@ -1,3 +1,3 @@
 // module MaterialUI.ToolbarTitle
 
-exports.toolbarTitle = require('material-ui/lib/toolbar/toolbar-title');
+exports.toolbarTitleClass = require('material-ui/lib/toolbar/toolbar-title');

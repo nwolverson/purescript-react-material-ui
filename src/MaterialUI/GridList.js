@@ -1,3 +1,3 @@
 // module MaterialUI.GridList
 
-exports.gridList = require('material-ui/lib/grid-list/grid-list');
+exports.gridListClass = require('material-ui/lib/grid-list/grid-list');

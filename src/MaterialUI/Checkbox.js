@@ -1,3 +1,3 @@
 // module MaterialUI.Checkbox
 
-exports.checkbox = require('material-ui/lib/checkbox');
+exports.checkboxClass = require('material-ui/lib/checkbox');

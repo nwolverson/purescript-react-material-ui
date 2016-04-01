@@ -1,3 +1,3 @@
 // module MaterialUI.CardMedia
 
-exports.cardMedia = require('material-ui/lib/card/card-media');
+exports.cardMediaClass = require('material-ui/lib/card/card-media');

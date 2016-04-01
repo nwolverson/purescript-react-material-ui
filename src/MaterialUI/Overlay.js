@@ -1,3 +1,3 @@
 // module MaterialUI.Overlay
 
-exports.overlay = require('material-ui/lib/overlay');
+exports.overlayClass = require('material-ui/lib/overlay');

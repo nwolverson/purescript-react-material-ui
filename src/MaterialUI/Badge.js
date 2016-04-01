@@ -1,3 +1,3 @@
 // module MaterialUI.Badge
 
-exports.badge = require('material-ui/lib/badge');
+exports.badgeClass = require('material-ui/lib/badge');

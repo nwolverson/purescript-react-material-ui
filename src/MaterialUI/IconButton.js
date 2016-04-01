@@ -1,3 +1,3 @@
 // module MaterialUI.IconButton
 
-exports.iconButton = require('material-ui/lib/icon-button');
+exports.iconButtonClass = require('material-ui/lib/icon-button');

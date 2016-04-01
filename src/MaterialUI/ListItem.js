@@ -1,3 +1,3 @@
 // module MaterialUI.ListItem
 
-exports.listItem = require('material-ui/lib/lists/list-item');
+exports.listItemClass = require('material-ui/lib/lists/list-item');

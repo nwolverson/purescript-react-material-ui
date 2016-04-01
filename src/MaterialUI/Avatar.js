@@ -1,3 +1,3 @@
 // module MaterialUI.Avatar
 
-exports.avatar = require('material-ui/lib/avatar');
+exports.avatarClass = require('material-ui/lib/avatar');

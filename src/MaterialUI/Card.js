@@ -1,3 +1,3 @@
 // module MaterialUI.Card
 
-exports.card = require('material-ui/lib/card/card');
+exports.cardClass = require('material-ui/lib/card/card');

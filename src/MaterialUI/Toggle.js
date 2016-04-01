@@ -1,3 +1,3 @@
 // module MaterialUI.Toggle
 
-exports.toggle = require('material-ui/lib/toggle');
+exports.toggleClass = require('material-ui/lib/toggle');

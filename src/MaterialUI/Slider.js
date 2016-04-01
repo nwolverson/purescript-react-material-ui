@@ -1,3 +1,3 @@
 // module MaterialUI.Slider
 
-exports.slider = require('material-ui/lib/slider');
+exports.sliderClass = require('material-ui/lib/slider');

@@ -1,3 +1,3 @@
 // module MaterialUI.TableHeader
 
-exports.tableHeader = require('material-ui/lib/table/table-header');
+exports.tableHeaderClass = require('material-ui/lib/table/table-header');

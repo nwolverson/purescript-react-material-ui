@@ -1,3 +1,3 @@
 // module MaterialUI.RadioButton
 
-exports.radioButton = require('material-ui/lib/radio-button');
+exports.radioButtonClass = require('material-ui/lib/radio-button');

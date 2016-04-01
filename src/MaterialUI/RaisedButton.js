@@ -1,3 +1,3 @@
 // module MaterialUI.RaisedButton
 
-exports.raisedButton = require('material-ui/lib/raised-button');
+exports.raisedButtonClass = require('material-ui/lib/raised-button');
