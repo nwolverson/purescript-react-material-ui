@@ -8,7 +8,7 @@ newtype EventHandlerOpt = EventHandlerOpt (EventHandler Unit)
 
 newtype UnknownType = UnknownType Foreign
 
-foreign import data Node :: *
+foreign import data Node :: Type
 
 numberNode :: Number -> Node
 numberNode = unsafeCoerce

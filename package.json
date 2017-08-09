@@ -18,6 +18,7 @@
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
     "react-tap-event-plugin": "^0.2.1",
-    "react-docgen": "^2.4.0"
+    "react-docgen": "^2.4.0",
+    "purescript-react-wrapper-gen": "https://github.com/nwolverson/purescript-react-wrapper-gen#633e22d15059c7a54da690cbcf09d2ac4b0b4e12"
   }
 }
