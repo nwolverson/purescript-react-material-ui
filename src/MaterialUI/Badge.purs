@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import badgeClass :: ReactClass BadgeProps
-foreign import data BadgeOption :: *
+foreign import data BadgeOption :: Type
 newtype BadgeProps = BadgeProps Foreign
 badgeProps :: Options BadgeOption -> BadgeProps
 badgeProps = BadgeProps <<< options

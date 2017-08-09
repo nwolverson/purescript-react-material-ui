@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import flatButtonClass :: ReactClass FlatButtonProps
-foreign import data FlatButtonOption :: *
+foreign import data FlatButtonOption :: Type
 newtype FlatButtonProps = FlatButtonProps Foreign
 flatButtonProps :: Options FlatButtonOption -> FlatButtonProps
 flatButtonProps = FlatButtonProps <<< options
@@ -19,12 +19,18 @@ disabled :: Option FlatButtonOption (Boolean)
 disabled = opt "disabled"
 hoverColor :: Option FlatButtonOption (String)
 hoverColor = opt "hoverColor"
+href :: Option FlatButtonOption (String)
+href = opt "href"
+icon :: Option FlatButtonOption (Node)
+icon = opt "icon"
 label :: Option FlatButtonOption (UnknownType)
 label = opt "label" -- custom
 labelPosition :: Option FlatButtonOption (UnknownType)
 labelPosition = opt "labelPosition" -- enum
 labelStyle :: Option FlatButtonOption (UnknownType)
 labelStyle = opt "labelStyle" -- object
+linkButton :: Option FlatButtonOption (Boolean)
+linkButton = opt "linkButton"
 onKeyboardFocus :: Option FlatButtonOption (EventHandlerOpt)
 onKeyboardFocus = opt "onKeyboardFocus"
 onMouseEnter :: Option FlatButtonOption (EventHandlerOpt)

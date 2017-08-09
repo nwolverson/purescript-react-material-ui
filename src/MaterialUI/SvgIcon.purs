@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import svgIconClass :: ReactClass SvgIconProps
-foreign import data SvgIconOption :: *
+foreign import data SvgIconOption :: Type
 newtype SvgIconProps = SvgIconProps Foreign
 svgIconProps :: Options SvgIconOption -> SvgIconProps
 svgIconProps = SvgIconProps <<< options

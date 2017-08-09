@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import cardTextClass :: ReactClass CardTextProps
-foreign import data CardTextOption :: *
+foreign import data CardTextOption :: Type
 newtype CardTextProps = CardTextProps Foreign
 cardTextProps :: Options CardTextOption -> CardTextProps
 cardTextProps = CardTextProps <<< options

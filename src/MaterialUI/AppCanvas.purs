@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import appCanvasClass :: ReactClass AppCanvasProps
-foreign import data AppCanvasOption :: *
+foreign import data AppCanvasOption :: Type
 newtype AppCanvasProps = AppCanvasProps Foreign
 appCanvasProps :: Options AppCanvasOption -> AppCanvasProps
 appCanvasProps = AppCanvasProps <<< options

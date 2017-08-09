@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import tableFooterClass :: ReactClass TableFooterProps
-foreign import data TableFooterOption :: *
+foreign import data TableFooterOption :: Type
 newtype TableFooterProps = TableFooterProps Foreign
 tableFooterProps :: Options TableFooterOption -> TableFooterProps
 tableFooterProps = TableFooterProps <<< options

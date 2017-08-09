@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import nestedListClass :: ReactClass NestedListProps
-foreign import data NestedListOption :: *
+foreign import data NestedListOption :: Type
 newtype NestedListProps = NestedListProps Foreign
 nestedListProps :: Options NestedListOption -> NestedListProps
 nestedListProps = NestedListProps <<< options

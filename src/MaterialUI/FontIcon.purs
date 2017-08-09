@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import fontIconClass :: ReactClass FontIconProps
-foreign import data FontIconOption :: *
+foreign import data FontIconOption :: Type
 newtype FontIconProps = FontIconProps Foreign
 fontIconProps :: Options FontIconOption -> FontIconProps
 fontIconProps = FontIconProps <<< options

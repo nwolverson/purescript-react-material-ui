@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import inkBarClass :: ReactClass InkBarProps
-foreign import data InkBarOption :: *
+foreign import data InkBarOption :: Type
 newtype InkBarProps = InkBarProps Foreign
 inkBarProps :: Options InkBarOption -> InkBarProps
 inkBarProps = InkBarProps <<< options

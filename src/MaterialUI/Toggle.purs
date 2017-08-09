@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import toggleClass :: ReactClass ToggleProps
-foreign import data ToggleOption :: *
+foreign import data ToggleOption :: Type
 newtype ToggleProps = ToggleProps Foreign
 toggleProps :: Options ToggleOption -> ToggleProps
 toggleProps = ToggleProps <<< options
@@ -27,6 +27,8 @@ onToggle :: Option ToggleOption (EventHandlerOpt)
 onToggle = opt "onToggle"
 rippleStyle :: Option ToggleOption (UnknownType)
 rippleStyle = opt "rippleStyle" -- object
+style :: Option ToggleOption (UnknownType)
+style = opt "style" -- object
 thumbStyle :: Option ToggleOption (UnknownType)
 thumbStyle = opt "thumbStyle" -- object
 toggled :: Option ToggleOption (Boolean)

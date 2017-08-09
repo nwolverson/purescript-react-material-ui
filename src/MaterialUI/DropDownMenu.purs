@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import dropDownMenuClass :: ReactClass DropDownMenuProps
-foreign import data DropDownMenuOption :: *
+foreign import data DropDownMenuOption :: Type
 newtype DropDownMenuProps = DropDownMenuProps Foreign
 dropDownMenuProps :: Options DropDownMenuOption -> DropDownMenuProps
 dropDownMenuProps = DropDownMenuProps <<< options

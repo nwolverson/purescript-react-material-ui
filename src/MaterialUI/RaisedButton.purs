@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import raisedButtonClass :: ReactClass RaisedButtonProps
-foreign import data RaisedButtonOption :: *
+foreign import data RaisedButtonOption :: Type
 newtype RaisedButtonProps = RaisedButtonProps Foreign
 raisedButtonProps :: Options RaisedButtonOption -> RaisedButtonProps
 raisedButtonProps = RaisedButtonProps <<< options
@@ -25,6 +25,10 @@ disabledLabelColor :: Option RaisedButtonOption (String)
 disabledLabelColor = opt "disabledLabelColor"
 fullWidth :: Option RaisedButtonOption (Boolean)
 fullWidth = opt "fullWidth"
+href :: Option RaisedButtonOption (String)
+href = opt "href"
+icon :: Option RaisedButtonOption (Node)
+icon = opt "icon"
 label :: Option RaisedButtonOption (UnknownType)
 label = opt "label" -- custom
 labelColor :: Option RaisedButtonOption (String)
@@ -33,6 +37,8 @@ labelPosition :: Option RaisedButtonOption (UnknownType)
 labelPosition = opt "labelPosition" -- enum
 labelStyle :: Option RaisedButtonOption (UnknownType)
 labelStyle = opt "labelStyle" -- object
+linkButton :: Option RaisedButtonOption (Boolean)
+linkButton = opt "linkButton"
 onMouseDown :: Option RaisedButtonOption (EventHandlerOpt)
 onMouseDown = opt "onMouseDown"
 onMouseEnter :: Option RaisedButtonOption (EventHandlerOpt)

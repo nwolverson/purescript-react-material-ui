@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import menuClass :: ReactClass MenuProps
-foreign import data MenuOption :: *
+foreign import data MenuOption :: Type
 newtype MenuProps = MenuProps Foreign
 menuProps :: Options MenuOption -> MenuProps
 menuProps = MenuProps <<< options

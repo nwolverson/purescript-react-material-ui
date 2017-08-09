@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import datePickerClass :: ReactClass DatePickerProps
-foreign import data DatePickerOption :: *
+foreign import data DatePickerOption :: Type
 newtype DatePickerProps = DatePickerProps Foreign
 datePickerProps :: Options DatePickerOption -> DatePickerProps
 datePickerProps = DatePickerProps <<< options
@@ -21,6 +21,10 @@ defaultDate :: Option DatePickerOption (UnknownType)
 defaultDate = opt "defaultDate" -- object
 disableYearSelection :: Option DatePickerOption (Boolean)
 disableYearSelection = opt "disableYearSelection"
+disabled :: Option DatePickerOption (Boolean)
+disabled = opt "disabled"
+firstDayOfWeek :: Option DatePickerOption (Number)
+firstDayOfWeek = opt "firstDayOfWeek"
 formatDate :: Option DatePickerOption (EventHandlerOpt)
 formatDate = opt "formatDate"
 locale :: Option DatePickerOption (String)

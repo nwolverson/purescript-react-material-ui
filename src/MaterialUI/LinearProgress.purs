@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import linearProgressClass :: ReactClass LinearProgressProps
-foreign import data LinearProgressOption :: *
+foreign import data LinearProgressOption :: Type
 newtype LinearProgressProps = LinearProgressProps Foreign
 linearProgressProps :: Options LinearProgressOption -> LinearProgressProps
 linearProgressProps = LinearProgressProps <<< options

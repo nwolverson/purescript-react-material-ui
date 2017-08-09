@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import beforeAfterWrapperClass :: ReactClass BeforeAfterWrapperProps
-foreign import data BeforeAfterWrapperOption :: *
+foreign import data BeforeAfterWrapperOption :: Type
 newtype BeforeAfterWrapperProps = BeforeAfterWrapperProps Foreign
 beforeAfterWrapperProps :: Options BeforeAfterWrapperOption -> BeforeAfterWrapperProps
 beforeAfterWrapperProps = BeforeAfterWrapperProps <<< options

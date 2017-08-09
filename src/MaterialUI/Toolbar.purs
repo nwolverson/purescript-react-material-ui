@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import toolbarClass :: ReactClass ToolbarProps
-foreign import data ToolbarOption :: *
+foreign import data ToolbarOption :: Type
 newtype ToolbarProps = ToolbarProps Foreign
 toolbarProps :: Options ToolbarOption -> ToolbarProps
 toolbarProps = ToolbarProps <<< options

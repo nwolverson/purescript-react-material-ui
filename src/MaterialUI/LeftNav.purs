@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import leftNavClass :: ReactClass LeftNavProps
-foreign import data LeftNavOption :: *
+foreign import data LeftNavOption :: Type
 newtype LeftNavProps = LeftNavProps Foreign
 leftNavProps :: Options LeftNavOption -> LeftNavProps
 leftNavProps = LeftNavProps <<< options

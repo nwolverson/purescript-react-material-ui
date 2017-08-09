@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import circularProgressClass :: ReactClass CircularProgressProps
-foreign import data CircularProgressOption :: *
+foreign import data CircularProgressOption :: Type
 newtype CircularProgressProps = CircularProgressProps Foreign
 circularProgressProps :: Options CircularProgressOption -> CircularProgressProps
 circularProgressProps = CircularProgressProps <<< options

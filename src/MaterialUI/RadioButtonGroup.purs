@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import radioButtonGroupClass :: ReactClass RadioButtonGroupProps
-foreign import data RadioButtonGroupOption :: *
+foreign import data RadioButtonGroupOption :: Type
 newtype RadioButtonGroupProps = RadioButtonGroupProps Foreign
 radioButtonGroupProps :: Options RadioButtonGroupOption -> RadioButtonGroupProps
 radioButtonGroupProps = RadioButtonGroupProps <<< options

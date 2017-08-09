@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import tabTemplateClass :: ReactClass TabTemplateProps
-foreign import data TabTemplateOption :: *
+foreign import data TabTemplateOption :: Type
 newtype TabTemplateProps = TabTemplateProps Foreign
 tabTemplateProps :: Options TabTemplateOption -> TabTemplateProps
 tabTemplateProps = TabTemplateProps <<< options

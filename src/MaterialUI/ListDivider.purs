@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import listDividerClass :: ReactClass ListDividerProps
-foreign import data ListDividerOption :: *
+foreign import data ListDividerOption :: Type
 newtype ListDividerProps = ListDividerProps Foreign
 listDividerProps :: Options ListDividerOption -> ListDividerProps
 listDividerProps = ListDividerProps <<< options

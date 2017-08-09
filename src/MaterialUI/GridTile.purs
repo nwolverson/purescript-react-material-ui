@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import gridTileClass :: ReactClass GridTileProps
-foreign import data GridTileOption :: *
+foreign import data GridTileOption :: Type
 newtype GridTileProps = GridTileProps Foreign
 gridTileProps :: Options GridTileOption -> GridTileProps
 gridTileProps = GridTileProps <<< options

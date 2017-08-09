@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import tooltipClass :: ReactClass TooltipProps
-foreign import data TooltipOption :: *
+foreign import data TooltipOption :: Type
 newtype TooltipProps = TooltipProps Foreign
 tooltipProps :: Options TooltipOption -> TooltipProps
 tooltipProps = TooltipProps <<< options

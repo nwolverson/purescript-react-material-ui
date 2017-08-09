@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import checkboxClass :: ReactClass CheckboxProps
-foreign import data CheckboxOption :: *
+foreign import data CheckboxOption :: Type
 newtype CheckboxProps = CheckboxProps Foreign
 checkboxProps :: Options CheckboxOption -> CheckboxProps
 checkboxProps = CheckboxProps <<< options
@@ -27,6 +27,8 @@ labelStyle :: Option CheckboxOption (UnknownType)
 labelStyle = opt "labelStyle" -- object
 onCheck :: Option CheckboxOption (EventHandlerOpt)
 onCheck = opt "onCheck"
+style :: Option CheckboxOption (UnknownType)
+style = opt "style" -- object
 unCheckedIcon :: Option CheckboxOption (ReactElement)
 unCheckedIcon = opt "unCheckedIcon"
 valueLink :: Option CheckboxOption (UnknownType)

@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import overlayClass :: ReactClass OverlayProps
-foreign import data OverlayOption :: *
+foreign import data OverlayOption :: Type
 newtype OverlayProps = OverlayProps Foreign
 overlayProps :: Options OverlayOption -> OverlayProps
 overlayProps = OverlayProps <<< options

@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import autoCompleteClass :: ReactClass AutoCompleteProps
-foreign import data AutoCompleteOption :: *
+foreign import data AutoCompleteOption :: Type
 newtype AutoCompleteProps = AutoCompleteProps Foreign
 autoCompleteProps :: Options AutoCompleteOption -> AutoCompleteProps
 autoCompleteProps = AutoCompleteProps <<< options

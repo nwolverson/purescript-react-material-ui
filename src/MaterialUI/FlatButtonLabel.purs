@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import flatButtonLabelClass :: ReactClass FlatButtonLabelProps
-foreign import data FlatButtonLabelOption :: *
+foreign import data FlatButtonLabelOption :: Type
 newtype FlatButtonLabelProps = FlatButtonLabelProps Foreign
 flatButtonLabelProps :: Options FlatButtonLabelOption -> FlatButtonLabelProps
 flatButtonLabelProps = FlatButtonLabelProps <<< options

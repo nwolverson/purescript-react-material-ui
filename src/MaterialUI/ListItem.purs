@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import listItemClass :: ReactClass ListItemProps
-foreign import data ListItemOption :: *
+foreign import data ListItemOption :: Type
 newtype ListItemProps = ListItemProps Foreign
 listItemProps :: Options ListItemOption -> ListItemProps
 listItemProps = ListItemProps <<< options
@@ -35,6 +35,8 @@ nestedItems :: Option ListItemOption (UnknownType)
 nestedItems = opt "nestedItems" -- arrayOf
 nestedLevel :: Option ListItemOption (Number)
 nestedLevel = opt "nestedLevel"
+nestedListStyle :: Option ListItemOption (UnknownType)
+nestedListStyle = opt "nestedListStyle" -- object
 onKeyboardFocus :: Option ListItemOption (EventHandlerOpt)
 onKeyboardFocus = opt "onKeyboardFocus"
 onMouseEnter :: Option ListItemOption (EventHandlerOpt)

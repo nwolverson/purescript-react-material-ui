@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import listClass :: ReactClass ListProps
-foreign import data ListOption :: *
+foreign import data ListOption :: Type
 newtype ListProps = ListProps Foreign
 listProps :: Options ListOption -> ListProps
 listProps = ListProps <<< options

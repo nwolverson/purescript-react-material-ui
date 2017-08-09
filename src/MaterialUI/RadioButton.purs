@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import radioButtonClass :: ReactClass RadioButtonProps
-foreign import data RadioButtonOption :: *
+foreign import data RadioButtonOption :: Type
 newtype RadioButtonProps = RadioButtonProps Foreign
 radioButtonProps :: Options RadioButtonOption -> RadioButtonProps
 radioButtonProps = RadioButtonProps <<< options
@@ -23,5 +23,7 @@ labelStyle :: Option RadioButtonOption (UnknownType)
 labelStyle = opt "labelStyle" -- object
 onCheck :: Option RadioButtonOption (EventHandlerOpt)
 onCheck = opt "onCheck"
+style :: Option RadioButtonOption (UnknownType)
+style = opt "style" -- object
 value :: Option RadioButtonOption (String)
 value = opt "value"

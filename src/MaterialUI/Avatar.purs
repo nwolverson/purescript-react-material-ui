@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import avatarClass :: ReactClass AvatarProps
-foreign import data AvatarOption :: *
+foreign import data AvatarOption :: Type
 newtype AvatarProps = AvatarProps Foreign
 avatarProps :: Options AvatarOption -> AvatarProps
 avatarProps = AvatarProps <<< options

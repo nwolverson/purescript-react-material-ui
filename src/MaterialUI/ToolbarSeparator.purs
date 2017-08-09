@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import toolbarSeparatorClass :: ReactClass ToolbarSeparatorProps
-foreign import data ToolbarSeparatorOption :: *
+foreign import data ToolbarSeparatorOption :: Type
 newtype ToolbarSeparatorProps = ToolbarSeparatorProps Foreign
 toolbarSeparatorProps :: Options ToolbarSeparatorOption -> ToolbarSeparatorProps
 toolbarSeparatorProps = ToolbarSeparatorProps <<< options

@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import sliderClass :: ReactClass SliderProps
-foreign import data SliderOption :: *
+foreign import data SliderOption :: Type
 newtype SliderProps = SliderProps Foreign
 sliderProps :: Options SliderOption -> SliderProps
 sliderProps = SliderProps <<< options

@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import iconButtonClass :: ReactClass IconButtonProps
-foreign import data IconButtonOption :: *
+foreign import data IconButtonOption :: Type
 newtype IconButtonProps = IconButtonProps Foreign
 iconButtonProps :: Options IconButtonOption -> IconButtonProps
 iconButtonProps = IconButtonProps <<< options

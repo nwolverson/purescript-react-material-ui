@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import dialogClass :: ReactClass DialogProps
-foreign import data DialogOption :: *
+foreign import data DialogOption :: Type
 newtype DialogProps = DialogProps Foreign
 dialogProps :: Options DialogOption -> DialogProps
 dialogProps = DialogProps <<< options

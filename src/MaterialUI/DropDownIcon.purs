@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import dropDownIconClass :: ReactClass DropDownIconProps
-foreign import data DropDownIconOption :: *
+foreign import data DropDownIconOption :: Type
 newtype DropDownIconProps = DropDownIconProps Foreign
 dropDownIconProps :: Options DropDownIconOption -> DropDownIconProps
 dropDownIconProps = DropDownIconProps <<< options

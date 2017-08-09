@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import refreshIndicatorClass :: ReactClass RefreshIndicatorProps
-foreign import data RefreshIndicatorOption :: *
+foreign import data RefreshIndicatorOption :: Type
 newtype RefreshIndicatorProps = RefreshIndicatorProps Foreign
 refreshIndicatorProps :: Options RefreshIndicatorOption -> RefreshIndicatorProps
 refreshIndicatorProps = RefreshIndicatorProps <<< options

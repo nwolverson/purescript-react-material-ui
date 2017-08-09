@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import cardExpandableClass :: ReactClass CardExpandableProps
-foreign import data CardExpandableOption :: *
+foreign import data CardExpandableOption :: Type
 newtype CardExpandableProps = CardExpandableProps Foreign
 cardExpandableProps :: Options CardExpandableOption -> CardExpandableProps
 cardExpandableProps = CardExpandableProps <<< options

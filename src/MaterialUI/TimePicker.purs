@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import timePickerClass :: ReactClass TimePickerProps
-foreign import data TimePickerOption :: *
+foreign import data TimePickerOption :: Type
 newtype TimePickerProps = TimePickerProps Foreign
 timePickerProps :: Options TimePickerOption -> TimePickerProps
 timePickerProps = TimePickerProps <<< options

@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import appBarClass :: ReactClass AppBarProps
-foreign import data AppBarOption :: *
+foreign import data AppBarOption :: Type
 newtype AppBarProps = AppBarProps Foreign
 appBarProps :: Options AppBarOption -> AppBarProps
 appBarProps = AppBarProps <<< options

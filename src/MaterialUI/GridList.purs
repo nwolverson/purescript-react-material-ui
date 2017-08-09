@@ -5,7 +5,7 @@ import Data.Options (Option, Options, opt, options)
 import Data.Foreign (Foreign)
 import MaterialUI (EventHandlerOpt, UnknownType, Node)
 foreign import gridListClass :: ReactClass GridListProps
-foreign import data GridListOption :: *
+foreign import data GridListOption :: Type
 newtype GridListProps = GridListProps Foreign
 gridListProps :: Options GridListOption -> GridListProps
 gridListProps = GridListProps <<< options
