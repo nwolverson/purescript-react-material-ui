@@ -33,5 +33,5 @@ position :: Option MobileStepperOption (UnknownType)
 position = opt "position" -- enum
 steps :: Option MobileStepperOption (Number)
 steps = opt "steps"
-type :: Option MobileStepperOption (UnknownType)
-type = opt "type" -- enum
+type' :: Option MobileStepperOption (UnknownType)
+type' = opt "type" -- enum

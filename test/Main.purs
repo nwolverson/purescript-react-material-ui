@@ -16,7 +16,6 @@ import Data.Options (Options, (:=))
 import MaterialUI (UnknownType(..))
 import MaterialUI.Paper (PaperOption)
 import MaterialUI.Paper as Paper
-import MaterialUI.RaisedButton as RaisedButton
 import Partial.Unsafe (unsafePartial)
 import React (ReactClass, ReactElement, createClass, createFactory, getProps, spec)
 import React.DOM as D
@@ -27,12 +26,8 @@ hello :: forall props. ReactClass { name :: String | props }
 hello = createClass $ spec unit \ctx -> do
   props <- getProps ctx
   pure $ Paper.paper (mempty :: Options PaperOption) [
-    D.text "Hello "
-  , D.text props.name
-  , RaisedButton.raisedButton (
-      RaisedButton.label := UnknownType (toForeign "Clicky button")
-   <> RaisedButton.style := UnknownType (toForeign $ { margin: "20px" })
-  ) []
+      D.text "Hello "
+    , D.text props.name
   ]
 
 main :: forall eff. Eff (dom :: DOM | eff) Unit

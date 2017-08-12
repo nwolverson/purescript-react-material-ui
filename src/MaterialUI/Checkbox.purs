@@ -35,8 +35,8 @@ indeterminate :: Option CheckboxOption (Boolean)
 indeterminate = opt "indeterminate"
 indeterminateIcon :: Option CheckboxOption (UnknownType)
 indeterminateIcon = opt "indeterminateIcon" -- union
-inputProps :: Option CheckboxOption (UnknownType)
-inputProps = opt "inputProps" -- Object
+inputProps' :: Option CheckboxOption (UnknownType)
+inputProps' = opt "inputProps" -- Object
 inputRef :: Option CheckboxOption (UnknownType)
 inputRef = opt "inputRef" -- Function
 name :: Option CheckboxOption (String)

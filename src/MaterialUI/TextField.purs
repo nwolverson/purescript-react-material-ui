@@ -34,15 +34,11 @@ helperTextClassName = opt "helperTextClassName"
 id :: Option TextFieldOption (String)
 id = opt "id"
 inputClassName :: Option TextFieldOption (String)
-inputClassName = opt "inputClassName"
-inputClassName :: Option TextFieldOption (String)
 inputClassName = opt "InputClassName"
 inputLabelProps :: Option TextFieldOption (UnknownType)
 inputLabelProps = opt "InputLabelProps" -- Object
-inputProps :: Option TextFieldOption (UnknownType)
-inputProps = opt "inputProps" -- Object
-inputProps :: Option TextFieldOption (UnknownType)
-inputProps = opt "InputProps" -- Object
+inputProps' :: Option TextFieldOption (UnknownType)
+inputProps' = opt "InputProps" -- Object
 inputRef :: Option TextFieldOption (UnknownType)
 inputRef = opt "inputRef" -- Function
 label :: Option TextFieldOption (UnknownType)
@@ -63,8 +59,8 @@ rows :: Option TextFieldOption (UnknownType)
 rows = opt "rows" -- union
 rowsMax :: Option TextFieldOption (UnknownType)
 rowsMax = opt "rowsMax" -- union
-type :: Option TextFieldOption (String)
-type = opt "type"
+type' :: Option TextFieldOption (String)
+type' = opt "type"
 value :: Option TextFieldOption (UnknownType)
 value = opt "value" -- union
 margin :: Option TextFieldOption (UnknownType)

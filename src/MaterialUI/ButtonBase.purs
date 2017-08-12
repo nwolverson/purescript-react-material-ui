@@ -21,8 +21,8 @@ disableRipple :: Option ButtonBaseOption (Boolean)
 disableRipple = opt "disableRipple"
 tabIndex :: Option ButtonBaseOption (String)
 tabIndex = opt "tabIndex"
-type :: Option ButtonBaseOption (String)
-type = opt "type"
+type' :: Option ButtonBaseOption (String)
+type' = opt "type"
 children :: Option ButtonBaseOption (UnknownType)
 children = opt "children" -- Element
 className :: Option ButtonBaseOption (String)

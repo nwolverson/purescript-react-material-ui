@@ -31,5 +31,5 @@ noWrap :: Option TypographyOption (Boolean)
 noWrap = opt "noWrap"
 paragraph :: Option TypographyOption (Boolean)
 paragraph = opt "paragraph"
-type :: Option TypographyOption (UnknownType)
-type = opt "type" -- union
+type' :: Option TypographyOption (UnknownType)
+type' = opt "type" -- union

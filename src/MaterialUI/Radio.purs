@@ -31,8 +31,8 @@ disableRipple :: Option RadioOption (Boolean)
 disableRipple = opt "disableRipple"
 icon :: Option RadioOption (UnknownType)
 icon = opt "icon" -- Element
-inputProps :: Option RadioOption (UnknownType)
-inputProps = opt "inputProps" -- Object
+inputProps' :: Option RadioOption (UnknownType)
+inputProps' = opt "inputProps" -- Object
 inputRef :: Option RadioOption (UnknownType)
 inputRef = opt "inputRef" -- Function
 name :: Option RadioOption (String)

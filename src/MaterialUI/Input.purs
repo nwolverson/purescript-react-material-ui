@@ -19,8 +19,8 @@ fullWidth :: Option InputOption (Boolean)
 fullWidth = opt "fullWidth"
 multiline :: Option InputOption (Boolean)
 multiline = opt "multiline"
-type :: Option InputOption (String)
-type = opt "type"
+type' :: Option InputOption (String)
+type' = opt "type"
 autoComplete :: Option InputOption (String)
 autoComplete = opt "autoComplete"
 autoFocus :: Option InputOption (Boolean)
@@ -37,8 +37,8 @@ error :: Option InputOption (Boolean)
 error = opt "error"
 id :: Option InputOption (String)
 id = opt "id"
-inputProps :: Option InputOption (UnknownType)
-inputProps = opt "inputProps" -- Object
+inputProps' :: Option InputOption (UnknownType)
+inputProps' = opt "inputProps" -- Object
 inputRef :: Option InputOption (UnknownType)
 inputRef = opt "inputRef" -- Function
 margin :: Option InputOption (UnknownType)

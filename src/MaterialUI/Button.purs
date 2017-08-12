@@ -27,8 +27,8 @@ raised :: Option ButtonOption (Boolean)
 raised = opt "raised"
 disableRipple :: Option ButtonOption (Boolean)
 disableRipple = opt "disableRipple"
-type :: Option ButtonOption (String)
-type = opt "type"
+type' :: Option ButtonOption (String)
+type' = opt "type"
 children :: Option ButtonOption (UnknownType)
 children = opt "children" -- Element
 className :: Option ButtonOption (String)

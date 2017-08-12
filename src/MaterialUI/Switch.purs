@@ -31,8 +31,8 @@ disableRipple :: Option SwitchOption (Boolean)
 disableRipple = opt "disableRipple"
 icon :: Option SwitchOption (UnknownType)
 icon = opt "icon" -- Element
-inputProps :: Option SwitchOption (UnknownType)
-inputProps = opt "inputProps" -- Object
+inputProps' :: Option SwitchOption (UnknownType)
+inputProps' = opt "inputProps" -- Object
 inputRef :: Option SwitchOption (UnknownType)
 inputRef = opt "inputRef" -- Function
 name :: Option SwitchOption (String)
