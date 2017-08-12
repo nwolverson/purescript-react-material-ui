@@ -1,3 +1,3 @@
 // module MaterialUI.Toolbar
 
-exports.toolbarClass = require('material-ui/lib/toolbar/toolbar');
+exports.toolbarClass = require('material-ui/Toolbar/Toolbar');

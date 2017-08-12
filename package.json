@@ -9,17 +9,17 @@
   },
   "scripts": {
     "test": "pulp browserify -m Test.Main -I test -t dist/test.js",
-    "gen": "cat components.txt | xargs purescript-react-wrapper-gen node_modules/material-ui/src MaterialUI material-ui/lib/ src"
+    "gen": "./gen.sh"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "material-ui": "^0.14.2",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
     "create-react-class": "^15.6.0",
-    "react-tap-event-plugin": "^0.2.1",
-    "react-docgen": "^2.4.0",
-    "purescript-react-wrapper-gen": "https://github.com/nwolverson/purescript-react-wrapper-gen#633e22d15059c7a54da690cbcf09d2ac4b0b4e12"
+    "material-ui": "^0.18.7",
+    "purescript-react-wrapper-gen": "https://github.com/nwolverson/purescript-react-wrapper-gen#v1.0.1",
+    "react": "^15.6.1",
+    "react-docgen": "^3.0.0-beta6",
+    "react-dom": "^15.6.1",
+    "react-tap-event-plugin": "^0.2.1"
   }
 }

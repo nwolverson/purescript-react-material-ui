@@ -11,27 +11,47 @@ snackbarProps :: Options SnackbarOption -> SnackbarProps
 snackbarProps = SnackbarProps <<< options
 snackbar :: Options SnackbarOption -> Array ReactElement -> ReactElement
 snackbar opts = createElement snackbarClass (snackbarProps opts)
-action :: Option SnackbarOption (String)
-action = opt "action"
+anchorOrigin :: Option SnackbarOption (UnknownType)
+anchorOrigin = opt "anchorOrigin" -- signature
 autoHideDuration :: Option SnackbarOption (Number)
 autoHideDuration = opt "autoHideDuration"
-bodyStyle :: Option SnackbarOption (UnknownType)
-bodyStyle = opt "bodyStyle" -- object
+classes :: Option SnackbarOption (UnknownType)
+classes = opt "classes" -- Object
+enterTransitionDuration :: Option SnackbarOption (Number)
+enterTransitionDuration = opt "enterTransitionDuration"
+leaveTransitionDuration :: Option SnackbarOption (Number)
+leaveTransitionDuration = opt "leaveTransitionDuration"
+action :: Option SnackbarOption (UnknownType)
+action = opt "action" -- Element
+children :: Option SnackbarOption (UnknownType)
+children = opt "children" -- Element
 className :: Option SnackbarOption (String)
 className = opt "className"
-message :: Option SnackbarOption (Node)
-message = opt "message"
-onActionTouchTap :: Option SnackbarOption (EventHandlerOpt)
-onActionTouchTap = opt "onActionTouchTap"
-onDismiss :: Option SnackbarOption (UnknownType)
-onDismiss = opt "onDismiss" -- custom
-onRequestClose :: Option SnackbarOption (EventHandlerOpt)
-onRequestClose = opt "onRequestClose"
-onShow :: Option SnackbarOption (UnknownType)
-onShow = opt "onShow" -- custom
+key :: Option SnackbarOption (UnknownType)
+key = opt "key" -- any
+message :: Option SnackbarOption (UnknownType)
+message = opt "message" -- Element
+onEnter :: Option SnackbarOption (UnknownType)
+onEnter = opt "onEnter" -- TransitionCallback
+onEntering :: Option SnackbarOption (UnknownType)
+onEntering = opt "onEntering" -- TransitionCallback
+onEntered :: Option SnackbarOption (UnknownType)
+onEntered = opt "onEntered" -- TransitionCallback
+onExit :: Option SnackbarOption (UnknownType)
+onExit = opt "onExit" -- TransitionCallback
+onExiting :: Option SnackbarOption (UnknownType)
+onExiting = opt "onExiting" -- TransitionCallback
+onExited :: Option SnackbarOption (UnknownType)
+onExited = opt "onExited" -- TransitionCallback
+onMouseEnter :: Option SnackbarOption (UnknownType)
+onMouseEnter = opt "onMouseEnter" -- Function
+onMouseLeave :: Option SnackbarOption (UnknownType)
+onMouseLeave = opt "onMouseLeave" -- Function
+onRequestClose :: Option SnackbarOption (UnknownType)
+onRequestClose = opt "onRequestClose" -- signature
 open :: Option SnackbarOption (Boolean)
 open = opt "open"
-openOnMount :: Option SnackbarOption (UnknownType)
-openOnMount = opt "openOnMount" -- custom
-style :: Option SnackbarOption (UnknownType)
-style = opt "style" -- object
+snackbarContentProps :: Option SnackbarOption (UnknownType)
+snackbarContentProps = opt "SnackbarContentProps" -- Object
+transition :: Option SnackbarOption (UnknownType)
+transition = opt "transition" -- union

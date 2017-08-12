@@ -11,41 +11,31 @@ menuProps :: Options MenuOption -> MenuProps
 menuProps = MenuProps <<< options
 menu :: Options MenuOption -> Array ReactElement -> ReactElement
 menu opts = createElement menuClass (menuProps opts)
-animated :: Option MenuOption (Boolean)
-animated = opt "animated"
-autoWidth :: Option MenuOption (Boolean)
-autoWidth = opt "autoWidth"
-children :: Option MenuOption (Node)
-children = opt "children"
-desktop :: Option MenuOption (Boolean)
-desktop = opt "desktop"
-initiallyKeyboardFocused :: Option MenuOption (Boolean)
-initiallyKeyboardFocused = opt "initiallyKeyboardFocused"
-listStyle :: Option MenuOption (UnknownType)
-listStyle = opt "listStyle" -- object
-maxHeight :: Option MenuOption (Number)
-maxHeight = opt "maxHeight"
-multiple :: Option MenuOption (Boolean)
-multiple = opt "multiple"
-onChange :: Option MenuOption (EventHandlerOpt)
-onChange = opt "onChange"
-onEscKeyDown :: Option MenuOption (EventHandlerOpt)
-onEscKeyDown = opt "onEscKeyDown"
-onItemTouchTap :: Option MenuOption (EventHandlerOpt)
-onItemTouchTap = opt "onItemTouchTap"
-onKeyDown :: Option MenuOption (EventHandlerOpt)
-onKeyDown = opt "onKeyDown"
-openDirection :: Option MenuOption (UnknownType)
-openDirection = opt "openDirection" -- custom
-selectedMenuItemStyle :: Option MenuOption (UnknownType)
-selectedMenuItemStyle = opt "selectedMenuItemStyle" -- object
-style :: Option MenuOption (UnknownType)
-style = opt "style" -- object
-value :: Option MenuOption (UnknownType)
-value = opt "value" -- any
-valueLink :: Option MenuOption (UnknownType)
-valueLink = opt "valueLink" -- object
-width :: Option MenuOption (UnknownType)
-width = opt "width" -- custom
-zDepth :: Option MenuOption (UnknownType)
-zDepth = opt "zDepth" -- custom
+classes :: Option MenuOption (UnknownType)
+classes = opt "classes" -- Object
+open :: Option MenuOption (Boolean)
+open = opt "open"
+transitionDuration :: Option MenuOption (UnknownType)
+transitionDuration = opt "transitionDuration" -- union
+anchorEl :: Option MenuOption (UnknownType)
+anchorEl = opt "anchorEl" -- Object
+children :: Option MenuOption (UnknownType)
+children = opt "children" -- Element
+className :: Option MenuOption (String)
+className = opt "className"
+menuListProps :: Option MenuOption (UnknownType)
+menuListProps = opt "MenuListProps" -- Object
+onEnter :: Option MenuOption (UnknownType)
+onEnter = opt "onEnter" -- TransitionCallback
+onEntering :: Option MenuOption (UnknownType)
+onEntering = opt "onEntering" -- TransitionCallback
+onEntered :: Option MenuOption (UnknownType)
+onEntered = opt "onEntered" -- TransitionCallback
+onExit :: Option MenuOption (UnknownType)
+onExit = opt "onExit" -- TransitionCallback
+onExiting :: Option MenuOption (UnknownType)
+onExiting = opt "onExiting" -- TransitionCallback
+onExited :: Option MenuOption (UnknownType)
+onExited = opt "onExited" -- TransitionCallback
+onRequestClose :: Option MenuOption (UnknownType)
+onRequestClose = opt "onRequestClose" -- Function

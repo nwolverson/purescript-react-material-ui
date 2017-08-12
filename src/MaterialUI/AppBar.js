@@ -1,3 +1,3 @@
 // module MaterialUI.AppBar
 
-exports.appBarClass = require('material-ui/lib/app-bar');
+exports.appBarClass = require('material-ui/AppBar/AppBar');

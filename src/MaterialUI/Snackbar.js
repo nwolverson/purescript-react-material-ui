@@ -1,3 +1,3 @@
 // module MaterialUI.Snackbar
 
-exports.snackbarClass = require('material-ui/lib/snackbar');
+exports.snackbarClass = require('material-ui/Snackbar/Snackbar');

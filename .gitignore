@@ -4,3 +4,4 @@
 /.psci*
 /src/.webpack.js
 /dist/test.js
+/material-ui/

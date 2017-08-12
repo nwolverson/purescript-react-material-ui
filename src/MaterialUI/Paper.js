@@ -1,3 +1,3 @@
 // module MaterialUI.Paper
 
-exports.paperClass = require('material-ui/lib/paper');
+exports.paperClass = require('material-ui/Paper/Paper');

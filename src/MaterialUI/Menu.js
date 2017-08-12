@@ -1,3 +1,3 @@
 // module MaterialUI.Menu
 
-exports.menuClass = require('material-ui/lib/menus/menu');
+exports.menuClass = require('material-ui/Menu/Menu');

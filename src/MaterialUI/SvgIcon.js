@@ -1,3 +1,3 @@
 // module MaterialUI.SvgIcon
 
-exports.svgIconClass = require('material-ui/lib/svg-icon');
+exports.svgIconClass = require('material-ui/SvgIcon/SvgIcon');
