@@ -30,7 +30,10 @@ hello = createClass $ spec unit \ctx -> do
   pure $ MuiThemeProvider.muiThemeProvider mempty [
     Paper.paper (mempty :: Options PaperOption) [
       D.text "Hello",
-      RaisedButton.raisedButton mempty [
+      RaisedButton.raisedButton (
+        RaisedButton.backgroundColor := "hotpink"
+      <> RaisedButton.primary := false
+      ) [
         D.text props.name
       ]
     ]
