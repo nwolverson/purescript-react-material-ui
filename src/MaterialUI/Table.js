@@ -1,3 +1,3 @@
 // module MaterialUI.Table
 
-exports.tableClass = require('material-ui/Table/Table');
+exports.tableClass = require('material-ui/Table/Table').default;

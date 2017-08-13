@@ -15,15 +15,9 @@ cellHeight :: Option GridListOption (UnknownType)
 cellHeight = opt "cellHeight" -- union
 children :: Option GridListOption (Node)
 children = opt "children"
-classes :: Option GridListOption (UnknownType)
-classes = opt "classes" -- object
-className :: Option GridListOption (String)
-className = opt "className"
 cols :: Option GridListOption (Number)
 cols = opt "cols"
-component :: Option GridListOption (UnknownType)
-component = opt "component" -- union
-spacing :: Option GridListOption (Number)
-spacing = opt "spacing"
+padding :: Option GridListOption (Number)
+padding = opt "padding"
 style :: Option GridListOption (UnknownType)
 style = opt "style" -- object

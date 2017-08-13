@@ -13,11 +13,15 @@ svgIcon :: Options SvgIconOption -> Array ReactElement -> ReactElement
 svgIcon opts = createElement svgIconClass (svgIconProps opts)
 children :: Option SvgIconOption (Node)
 children = opt "children"
-classes :: Option SvgIconOption (UnknownType)
-classes = opt "classes" -- object
-className :: Option SvgIconOption (String)
-className = opt "className"
-titleAccess :: Option SvgIconOption (String)
-titleAccess = opt "titleAccess"
+color :: Option SvgIconOption (String)
+color = opt "color"
+hoverColor :: Option SvgIconOption (String)
+hoverColor = opt "hoverColor"
+onMouseEnter :: Option SvgIconOption (EventHandlerOpt)
+onMouseEnter = opt "onMouseEnter"
+onMouseLeave :: Option SvgIconOption (EventHandlerOpt)
+onMouseLeave = opt "onMouseLeave"
+style :: Option SvgIconOption (UnknownType)
+style = opt "style" -- object
 viewBox :: Option SvgIconOption (String)
 viewBox = opt "viewBox"

@@ -1,0 +1,47 @@
+module MaterialUI.Slider where
+import Prelude (Unit, unit, (<<<))
+import React (EventHandler, ReactClass, ReactElement, createElement)
+import Data.Options (Option, Options, opt, options)
+import Data.Foreign (Foreign)
+import MaterialUI (EventHandlerOpt, UnknownType, Node)
+foreign import sliderClass :: ReactClass SliderProps
+foreign import data SliderOption :: Type
+newtype SliderProps = SliderProps Foreign
+sliderProps :: Options SliderOption -> SliderProps
+sliderProps = SliderProps <<< options
+slider :: Options SliderOption -> Array ReactElement -> ReactElement
+slider opts = createElement sliderClass (sliderProps opts)
+axis :: Option SliderOption (UnknownType)
+axis = opt "axis" -- enum
+defaultValue :: Option SliderOption (UnknownType)
+defaultValue = opt "defaultValue" -- custom
+disableFocusRipple :: Option SliderOption (Boolean)
+disableFocusRipple = opt "disableFocusRipple"
+disabled :: Option SliderOption (Boolean)
+disabled = opt "disabled"
+max :: Option SliderOption (UnknownType)
+max = opt "max" -- custom
+min :: Option SliderOption (UnknownType)
+min = opt "min" -- custom
+name :: Option SliderOption (String)
+name = opt "name"
+onBlur :: Option SliderOption (EventHandlerOpt)
+onBlur = opt "onBlur"
+onChange :: Option SliderOption (EventHandlerOpt)
+onChange = opt "onChange"
+onDragStart :: Option SliderOption (EventHandlerOpt)
+onDragStart = opt "onDragStart"
+onDragStop :: Option SliderOption (EventHandlerOpt)
+onDragStop = opt "onDragStop"
+onFocus :: Option SliderOption (EventHandlerOpt)
+onFocus = opt "onFocus"
+required :: Option SliderOption (Boolean)
+required = opt "required"
+sliderStyle :: Option SliderOption (UnknownType)
+sliderStyle = opt "sliderStyle" -- object
+step :: Option SliderOption (Number)
+step = opt "step"
+style :: Option SliderOption (UnknownType)
+style = opt "style" -- object
+value :: Option SliderOption (UnknownType)
+value = opt "value" -- custom

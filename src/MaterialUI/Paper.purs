@@ -11,13 +11,15 @@ paperProps :: Options PaperOption -> PaperProps
 paperProps = PaperProps <<< options
 paper :: Options PaperOption -> Array ReactElement -> ReactElement
 paper opts = createElement paperClass (paperProps opts)
-classes :: Option PaperOption (UnknownType)
-classes = opt "classes" -- Object
-component :: Option PaperOption (UnknownType)
-component = opt "component" -- union
-elevation :: Option PaperOption (Number)
-elevation = opt "elevation"
-square :: Option PaperOption (Boolean)
-square = opt "square"
-className :: Option PaperOption (String)
-className = opt "className"
+children :: Option PaperOption (Node)
+children = opt "children"
+circle :: Option PaperOption (Boolean)
+circle = opt "circle"
+rounded :: Option PaperOption (Boolean)
+rounded = opt "rounded"
+style :: Option PaperOption (UnknownType)
+style = opt "style" -- object
+transitionEnabled :: Option PaperOption (Boolean)
+transitionEnabled = opt "transitionEnabled"
+zDepth :: Option PaperOption (UnknownType)
+zDepth = opt "zDepth" -- custom

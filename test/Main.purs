@@ -13,21 +13,27 @@ import Data.Foreign (toForeign)
 import Data.Maybe (fromJust)
 import Data.Monoid (mempty)
 import Data.Options (Options, (:=))
-import MaterialUI (UnknownType(..))
 import MaterialUI.Paper (PaperOption)
 import MaterialUI.Paper as Paper
 import Partial.Unsafe (unsafePartial)
-import React (ReactClass, ReactElement, createClass, createFactory, getProps, spec)
+import React (ReactClass, ReactElement, createClass, createClassStateless, createElement, createFactory, getProps, spec)
 import React.DOM as D
 import React.DOM.Props as P
 import ReactDOM (render)
+import MaterialUI.MuiThemeProvider as MuiThemeProvider
+import MaterialUI.RaisedButton as RaisedButton
 
 hello :: forall props. ReactClass { name :: String | props }
 hello = createClass $ spec unit \ctx -> do
   props <- getProps ctx
-  pure $ Paper.paper (mempty :: Options PaperOption) [
-      D.text "Hello "
-    , D.text props.name
+  -- pure $ D.h1 [] [ D.text "Hello" ]
+  pure $ MuiThemeProvider.muiThemeProvider mempty [
+    Paper.paper (mempty :: Options PaperOption) [
+      D.text "Hello",
+      RaisedButton.raisedButton mempty [
+        D.text props.name
+      ]
+    ]
   ]
 
 main :: forall eff. Eff (dom :: DOM | eff) Unit

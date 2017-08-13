@@ -1,3 +1,3 @@
 // module MaterialUI.List
 
-exports.listClass = require('material-ui/List/List');
+exports.listClass = require('material-ui/List/List').default;

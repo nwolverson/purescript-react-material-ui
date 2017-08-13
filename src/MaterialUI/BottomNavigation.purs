@@ -13,13 +13,7 @@ bottomNavigation :: Options BottomNavigationOption -> Array ReactElement -> Reac
 bottomNavigation opts = createElement bottomNavigationClass (bottomNavigationProps opts)
 children :: Option BottomNavigationOption (Node)
 children = opt "children"
-classes :: Option BottomNavigationOption (UnknownType)
-classes = opt "classes" -- object
-className :: Option BottomNavigationOption (String)
-className = opt "className"
-onChange :: Option BottomNavigationOption (EventHandlerOpt)
-onChange = opt "onChange"
-showLabels :: Option BottomNavigationOption (Boolean)
-showLabels = opt "showLabels"
-value :: Option BottomNavigationOption (UnknownType)
-value = opt "value" -- any
+selectedIndex :: Option BottomNavigationOption (Number)
+selectedIndex = opt "selectedIndex"
+style :: Option BottomNavigationOption (UnknownType)
+style = opt "style" -- object
