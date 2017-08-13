@@ -1,9 +1,13 @@
 {
   "name": "purescript-react-material-ui",
-  "version": "0.0.0",
   "moduleType": [
     "node"
   ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nwolverson/purescript-react-material-ui.git"
+  },
   "ignore": [
     "**/.*",
     "node_modules",
