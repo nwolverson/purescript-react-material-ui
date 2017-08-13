@@ -20,24 +20,22 @@ import React (ReactClass, ReactElement, createClass, createClassStateless, creat
 import React.DOM as D
 import React.DOM.Props as P
 import ReactDOM (render)
-import MaterialUI.MuiThemeProvider as MuiThemeProvider
-import MaterialUI.RaisedButton as RaisedButton
+import MaterialUI.Button as Button
+
 
 hello :: forall props. ReactClass { name :: String | props }
 hello = createClass $ spec unit \ctx -> do
   props <- getProps ctx
-  -- pure $ D.h1 [] [ D.text "Hello" ]
-  pure $ MuiThemeProvider.muiThemeProvider mempty [
+  pure $ 
     Paper.paper (mempty :: Options PaperOption) [
       D.text "Hello",
-      RaisedButton.raisedButton (
-        RaisedButton.backgroundColor := "hotpink"
-      <> RaisedButton.primary := false
+      Button.button (
+        Button.raised := true
+      <> Button.dense := false
       ) [
         D.text props.name
       ]
     ]
-  ]
 
 main :: forall eff. Eff (dom :: DOM | eff) Unit
 main = void (elm' >>= render ui)

@@ -11,33 +11,27 @@ drawerProps :: Options DrawerOption -> DrawerProps
 drawerProps = DrawerProps <<< options
 drawer :: Options DrawerOption -> Array ReactElement -> ReactElement
 drawer opts = createElement drawerClass (drawerProps opts)
-children :: Option DrawerOption (Node)
-children = opt "children"
-className :: Option DrawerOption (String)
-className = opt "className"
-containerClassName :: Option DrawerOption (String)
-containerClassName = opt "containerClassName"
-containerStyle :: Option DrawerOption (UnknownType)
-containerStyle = opt "containerStyle" -- object
-disableSwipeToOpen :: Option DrawerOption (Boolean)
-disableSwipeToOpen = opt "disableSwipeToOpen"
+anchor :: Option DrawerOption (UnknownType)
+anchor = opt "anchor" -- union
 docked :: Option DrawerOption (Boolean)
 docked = opt "docked"
-onRequestChange :: Option DrawerOption (EventHandlerOpt)
-onRequestChange = opt "onRequestChange"
+classes :: Option DrawerOption (UnknownType)
+classes = opt "classes" -- Object
+enterTransitionDuration :: Option DrawerOption (Number)
+enterTransitionDuration = opt "enterTransitionDuration"
+leaveTransitionDuration :: Option DrawerOption (Number)
+leaveTransitionDuration = opt "leaveTransitionDuration"
 open :: Option DrawerOption (Boolean)
 open = opt "open"
-openSecondary :: Option DrawerOption (Boolean)
-openSecondary = opt "openSecondary"
-overlayClassName :: Option DrawerOption (String)
-overlayClassName = opt "overlayClassName"
-overlayStyle :: Option DrawerOption (UnknownType)
-overlayStyle = opt "overlayStyle" -- object
-style :: Option DrawerOption (UnknownType)
-style = opt "style" -- object
-swipeAreaWidth :: Option DrawerOption (Number)
-swipeAreaWidth = opt "swipeAreaWidth"
-width :: Option DrawerOption (UnknownType)
-width = opt "width" -- union
-zDepth :: Option DrawerOption (UnknownType)
-zDepth = opt "zDepth" -- custom
+elevation :: Option DrawerOption (Number)
+elevation = opt "elevation"
+children :: Option DrawerOption (UnknownType)
+children = opt "children" -- Element
+className :: Option DrawerOption (String)
+className = opt "className"
+onRequestClose :: Option DrawerOption (UnknownType)
+onRequestClose = opt "onRequestClose" -- Function
+slideProps :: Option DrawerOption (UnknownType)
+slideProps = opt "SlideProps" -- Object
+theme :: Option DrawerOption (UnknownType)
+theme = opt "theme" -- Object

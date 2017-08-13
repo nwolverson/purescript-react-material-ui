@@ -13,15 +13,11 @@ badge :: Options BadgeOption -> Array ReactElement -> ReactElement
 badge opts = createElement badgeClass (badgeProps opts)
 badgeContent :: Option BadgeOption (Node)
 badgeContent = opt "badgeContent"
-badgeStyle :: Option BadgeOption (UnknownType)
-badgeStyle = opt "badgeStyle" -- object
 children :: Option BadgeOption (Node)
 children = opt "children"
+classes :: Option BadgeOption (UnknownType)
+classes = opt "classes" -- object
 className :: Option BadgeOption (String)
 className = opt "className"
-primary :: Option BadgeOption (Boolean)
-primary = opt "primary"
-secondary :: Option BadgeOption (Boolean)
-secondary = opt "secondary"
-style :: Option BadgeOption (UnknownType)
-style = opt "style" -- object
+color :: Option BadgeOption (UnknownType)
+color = opt "color" -- enum

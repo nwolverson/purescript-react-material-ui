@@ -1,3 +1,3 @@
 // module MaterialUI.LinearProgress
 
-exports.linearProgressClass = require('material-ui/LinearProgress/LinearProgress').default;
+exports.linearProgressClass = require('material-ui/Progress/LinearProgress').default;

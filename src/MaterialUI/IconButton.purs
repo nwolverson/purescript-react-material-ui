@@ -13,43 +13,15 @@ iconButton :: Options IconButtonOption -> Array ReactElement -> ReactElement
 iconButton opts = createElement iconButtonClass (iconButtonProps opts)
 children :: Option IconButtonOption (Node)
 children = opt "children"
+classes :: Option IconButtonOption (UnknownType)
+classes = opt "classes" -- object
 className :: Option IconButtonOption (String)
 className = opt "className"
-disableTouchRipple :: Option IconButtonOption (Boolean)
-disableTouchRipple = opt "disableTouchRipple"
+color :: Option IconButtonOption (UnknownType)
+color = opt "color" -- enum
 disabled :: Option IconButtonOption (Boolean)
 disabled = opt "disabled"
-hoveredStyle :: Option IconButtonOption (UnknownType)
-hoveredStyle = opt "hoveredStyle" -- object
-href :: Option IconButtonOption (String)
-href = opt "href"
-iconClassName :: Option IconButtonOption (String)
-iconClassName = opt "iconClassName"
-iconStyle :: Option IconButtonOption (UnknownType)
-iconStyle = opt "iconStyle" -- object
-onBlur :: Option IconButtonOption (EventHandlerOpt)
-onBlur = opt "onBlur"
-onClick :: Option IconButtonOption (EventHandlerOpt)
-onClick = opt "onClick"
-onFocus :: Option IconButtonOption (EventHandlerOpt)
-onFocus = opt "onFocus"
-onKeyboardFocus :: Option IconButtonOption (EventHandlerOpt)
-onKeyboardFocus = opt "onKeyboardFocus"
-onMouseEnter :: Option IconButtonOption (EventHandlerOpt)
-onMouseEnter = opt "onMouseEnter"
-onMouseLeave :: Option IconButtonOption (EventHandlerOpt)
-onMouseLeave = opt "onMouseLeave"
-onMouseOut :: Option IconButtonOption (EventHandlerOpt)
-onMouseOut = opt "onMouseOut"
-onTouchStart :: Option IconButtonOption (EventHandlerOpt)
-onTouchStart = opt "onTouchStart"
-style :: Option IconButtonOption (UnknownType)
-style = opt "style" -- object
-tooltip :: Option IconButtonOption (Node)
-tooltip = opt "tooltip"
-tooltipPosition :: Option IconButtonOption (UnknownType)
-tooltipPosition = opt "tooltipPosition" -- custom
-tooltipStyles :: Option IconButtonOption (UnknownType)
-tooltipStyles = opt "tooltipStyles" -- object
-touch :: Option IconButtonOption (Boolean)
-touch = opt "touch"
+disableRipple :: Option IconButtonOption (Boolean)
+disableRipple = opt "disableRipple"
+rootRef :: Option IconButtonOption (EventHandlerOpt)
+rootRef = opt "rootRef"

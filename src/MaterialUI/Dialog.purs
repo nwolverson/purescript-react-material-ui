@@ -11,49 +11,43 @@ dialogProps :: Options DialogOption -> DialogProps
 dialogProps = DialogProps <<< options
 dialog :: Options DialogOption -> Array ReactElement -> ReactElement
 dialog opts = createElement dialogClass (dialogProps opts)
-actions :: Option DialogOption (Node)
-actions = opt "actions"
-actionsContainerClassName :: Option DialogOption (String)
-actionsContainerClassName = opt "actionsContainerClassName"
-actionsContainerStyle :: Option DialogOption (UnknownType)
-actionsContainerStyle = opt "actionsContainerStyle" -- object
-autoDetectWindowHeight :: Option DialogOption (Boolean)
-autoDetectWindowHeight = opt "autoDetectWindowHeight"
-autoScrollBodyContent :: Option DialogOption (Boolean)
-autoScrollBodyContent = opt "autoScrollBodyContent"
-bodyClassName :: Option DialogOption (String)
-bodyClassName = opt "bodyClassName"
-bodyStyle :: Option DialogOption (UnknownType)
-bodyStyle = opt "bodyStyle" -- object
-children :: Option DialogOption (Node)
-children = opt "children"
+classes :: Option DialogOption (UnknownType)
+classes = opt "classes" -- Object
+children :: Option DialogOption (UnknownType)
+children = opt "children" -- Element
 className :: Option DialogOption (String)
 className = opt "className"
-contentClassName :: Option DialogOption (String)
-contentClassName = opt "contentClassName"
-contentStyle :: Option DialogOption (UnknownType)
-contentStyle = opt "contentStyle" -- object
-modal :: Option DialogOption (Boolean)
-modal = opt "modal"
-onRequestClose :: Option DialogOption (EventHandlerOpt)
-onRequestClose = opt "onRequestClose"
+fullScreen :: Option DialogOption (Boolean)
+fullScreen = opt "fullScreen"
+ignoreBackdropClick :: Option DialogOption (Boolean)
+ignoreBackdropClick = opt "ignoreBackdropClick"
+ignoreEscapeKeyUp :: Option DialogOption (Boolean)
+ignoreEscapeKeyUp = opt "ignoreEscapeKeyUp"
+enterTransitionDuration :: Option DialogOption (Number)
+enterTransitionDuration = opt "enterTransitionDuration"
+leaveTransitionDuration :: Option DialogOption (Number)
+leaveTransitionDuration = opt "leaveTransitionDuration"
+maxWidth :: Option DialogOption (UnknownType)
+maxWidth = opt "maxWidth" -- union
+onBackdropClick :: Option DialogOption (UnknownType)
+onBackdropClick = opt "onBackdropClick" -- Function
+onEnter :: Option DialogOption (UnknownType)
+onEnter = opt "onEnter" -- TransitionCallback
+onEntering :: Option DialogOption (UnknownType)
+onEntering = opt "onEntering" -- TransitionCallback
+onEntered :: Option DialogOption (UnknownType)
+onEntered = opt "onEntered" -- TransitionCallback
+onEscapeKeyUp :: Option DialogOption (UnknownType)
+onEscapeKeyUp = opt "onEscapeKeyUp" -- Function
+onExit :: Option DialogOption (UnknownType)
+onExit = opt "onExit" -- TransitionCallback
+onExiting :: Option DialogOption (UnknownType)
+onExiting = opt "onExiting" -- TransitionCallback
+onExited :: Option DialogOption (UnknownType)
+onExited = opt "onExited" -- TransitionCallback
+onRequestClose :: Option DialogOption (UnknownType)
+onRequestClose = opt "onRequestClose" -- Function
 open :: Option DialogOption (Boolean)
 open = opt "open"
-overlayClassName :: Option DialogOption (String)
-overlayClassName = opt "overlayClassName"
-overlayStyle :: Option DialogOption (UnknownType)
-overlayStyle = opt "overlayStyle" -- object
-paperClassName :: Option DialogOption (String)
-paperClassName = opt "paperClassName"
-paperProps :: Option DialogOption (UnknownType)
-paperProps = opt "paperProps" -- object
-repositionOnUpdate :: Option DialogOption (Boolean)
-repositionOnUpdate = opt "repositionOnUpdate"
-style :: Option DialogOption (UnknownType)
-style = opt "style" -- object
-title :: Option DialogOption (Node)
-title = opt "title"
-titleClassName :: Option DialogOption (String)
-titleClassName = opt "titleClassName"
-titleStyle :: Option DialogOption (UnknownType)
-titleStyle = opt "titleStyle" -- object
+transition :: Option DialogOption (UnknownType)
+transition = opt "transition" -- union

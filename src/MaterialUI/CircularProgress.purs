@@ -11,10 +11,12 @@ circularProgressProps :: Options CircularProgressOption -> CircularProgressProps
 circularProgressProps = CircularProgressProps <<< options
 circularProgress :: Options CircularProgressOption -> Array ReactElement -> ReactElement
 circularProgress opts = createElement circularProgressClass (circularProgressProps opts)
-color :: Option CircularProgressOption (String)
-color = opt "color"
-innerStyle :: Option CircularProgressOption (UnknownType)
-innerStyle = opt "innerStyle" -- object
+classes :: Option CircularProgressOption (UnknownType)
+classes = opt "classes" -- object
+className :: Option CircularProgressOption (String)
+className = opt "className"
+color :: Option CircularProgressOption (UnknownType)
+color = opt "color" -- enum
 max :: Option CircularProgressOption (Number)
 max = opt "max"
 min :: Option CircularProgressOption (Number)
@@ -23,9 +25,5 @@ mode :: Option CircularProgressOption (UnknownType)
 mode = opt "mode" -- enum
 size :: Option CircularProgressOption (Number)
 size = opt "size"
-style :: Option CircularProgressOption (UnknownType)
-style = opt "style" -- object
-thickness :: Option CircularProgressOption (Number)
-thickness = opt "thickness"
 value :: Option CircularProgressOption (Number)
 value = opt "value"

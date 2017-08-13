@@ -11,13 +11,11 @@ cardActionsProps :: Options CardActionsOption -> CardActionsProps
 cardActionsProps = CardActionsProps <<< options
 cardActions :: Options CardActionsOption -> Array ReactElement -> ReactElement
 cardActions opts = createElement cardActionsClass (cardActionsProps opts)
-actAsExpander :: Option CardActionsOption (Boolean)
-actAsExpander = opt "actAsExpander"
-children :: Option CardActionsOption (Node)
-children = opt "children"
-expandable :: Option CardActionsOption (Boolean)
-expandable = opt "expandable"
-showExpandableButton :: Option CardActionsOption (Boolean)
-showExpandableButton = opt "showExpandableButton"
-style :: Option CardActionsOption (UnknownType)
-style = opt "style" -- object
+classes :: Option CardActionsOption (UnknownType)
+classes = opt "classes" -- Object
+disableActionSpacing :: Option CardActionsOption (Boolean)
+disableActionSpacing = opt "disableActionSpacing"
+children :: Option CardActionsOption (UnknownType)
+children = opt "children" -- Element
+className :: Option CardActionsOption (String)
+className = opt "className"

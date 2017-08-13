@@ -11,65 +11,57 @@ textFieldProps :: Options TextFieldOption -> TextFieldProps
 textFieldProps = TextFieldProps <<< options
 textField :: Options TextFieldOption -> Array ReactElement -> ReactElement
 textField opts = createElement textFieldClass (textFieldProps opts)
-children :: Option TextFieldOption (Node)
-children = opt "children"
+autoComplete :: Option TextFieldOption (String)
+autoComplete = opt "autoComplete"
+autoFocus :: Option TextFieldOption (Boolean)
+autoFocus = opt "autoFocus"
 className :: Option TextFieldOption (String)
 className = opt "className"
-defaultValue :: Option TextFieldOption (UnknownType)
-defaultValue = opt "defaultValue" -- any
+defaultValue :: Option TextFieldOption (String)
+defaultValue = opt "defaultValue"
 disabled :: Option TextFieldOption (Boolean)
 disabled = opt "disabled"
-errorStyle :: Option TextFieldOption (UnknownType)
-errorStyle = opt "errorStyle" -- object
-errorText :: Option TextFieldOption (Node)
-errorText = opt "errorText"
-floatingLabelFixed :: Option TextFieldOption (Boolean)
-floatingLabelFixed = opt "floatingLabelFixed"
-floatingLabelFocusStyle :: Option TextFieldOption (UnknownType)
-floatingLabelFocusStyle = opt "floatingLabelFocusStyle" -- object
-floatingLabelShrinkStyle :: Option TextFieldOption (UnknownType)
-floatingLabelShrinkStyle = opt "floatingLabelShrinkStyle" -- object
-floatingLabelStyle :: Option TextFieldOption (UnknownType)
-floatingLabelStyle = opt "floatingLabelStyle" -- object
-floatingLabelText :: Option TextFieldOption (Node)
-floatingLabelText = opt "floatingLabelText"
+error :: Option TextFieldOption (Boolean)
+error = opt "error"
+formHelperTextProps :: Option TextFieldOption (UnknownType)
+formHelperTextProps = opt "FormHelperTextProps" -- Object
 fullWidth :: Option TextFieldOption (Boolean)
 fullWidth = opt "fullWidth"
-hintStyle :: Option TextFieldOption (UnknownType)
-hintStyle = opt "hintStyle" -- object
-hintText :: Option TextFieldOption (Node)
-hintText = opt "hintText"
+helperText :: Option TextFieldOption (UnknownType)
+helperText = opt "helperText" -- union
+helperTextClassName :: Option TextFieldOption (String)
+helperTextClassName = opt "helperTextClassName"
 id :: Option TextFieldOption (String)
 id = opt "id"
-inputStyle :: Option TextFieldOption (UnknownType)
-inputStyle = opt "inputStyle" -- object
-multiLine :: Option TextFieldOption (Boolean)
-multiLine = opt "multiLine"
+inputClassName :: Option TextFieldOption (String)
+inputClassName = opt "inputClassName"
+inputLabelProps :: Option TextFieldOption (UnknownType)
+inputLabelProps = opt "InputLabelProps" -- Object
+inputProps' :: Option TextFieldOption (UnknownType)
+inputProps' = opt "InputProps" -- Object
+inputRef :: Option TextFieldOption (UnknownType)
+inputRef = opt "inputRef" -- Function
+label :: Option TextFieldOption (UnknownType)
+label = opt "label" -- union
+labelClassName :: Option TextFieldOption (String)
+labelClassName = opt "labelClassName"
+multiline :: Option TextFieldOption (Boolean)
+multiline = opt "multiline"
 name :: Option TextFieldOption (String)
 name = opt "name"
-onBlur :: Option TextFieldOption (EventHandlerOpt)
-onBlur = opt "onBlur"
-onChange :: Option TextFieldOption (EventHandlerOpt)
-onChange = opt "onChange"
-onFocus :: Option TextFieldOption (EventHandlerOpt)
-onFocus = opt "onFocus"
-rows :: Option TextFieldOption (Number)
-rows = opt "rows"
-rowsMax :: Option TextFieldOption (Number)
-rowsMax = opt "rowsMax"
-style :: Option TextFieldOption (UnknownType)
-style = opt "style" -- object
-textareaStyle :: Option TextFieldOption (UnknownType)
-textareaStyle = opt "textareaStyle" -- object
+placeholder :: Option TextFieldOption (String)
+placeholder = opt "placeholder"
+required :: Option TextFieldOption (Boolean)
+required = opt "required"
+rootRef :: Option TextFieldOption (UnknownType)
+rootRef = opt "rootRef" -- Function
+rows :: Option TextFieldOption (UnknownType)
+rows = opt "rows" -- union
+rowsMax :: Option TextFieldOption (UnknownType)
+rowsMax = opt "rowsMax" -- union
 type' :: Option TextFieldOption (String)
 type' = opt "type"
-underlineDisabledStyle :: Option TextFieldOption (UnknownType)
-underlineDisabledStyle = opt "underlineDisabledStyle" -- object
-underlineFocusStyle :: Option TextFieldOption (UnknownType)
-underlineFocusStyle = opt "underlineFocusStyle" -- object
-underlineShow :: Option TextFieldOption (Boolean)
-underlineShow = opt "underlineShow"
-underlineStyle :: Option TextFieldOption (UnknownType)
-underlineStyle = opt "underlineStyle" -- object
 value :: Option TextFieldOption (UnknownType)
-value = opt "value" -- any
+value = opt "value" -- union
+margin :: Option TextFieldOption (UnknownType)
+margin = opt "margin" -- union

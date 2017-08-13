@@ -11,19 +11,7 @@ cardProps :: Options CardOption -> CardProps
 cardProps = CardProps <<< options
 card :: Options CardOption -> Array ReactElement -> ReactElement
 card opts = createElement cardClass (cardProps opts)
-children :: Option CardOption (Node)
-children = opt "children"
-containerStyle :: Option CardOption (UnknownType)
-containerStyle = opt "containerStyle" -- object
-expandable :: Option CardOption (Boolean)
-expandable = opt "expandable"
-expanded :: Option CardOption (Boolean)
-expanded = opt "expanded"
-initiallyExpanded :: Option CardOption (Boolean)
-initiallyExpanded = opt "initiallyExpanded"
-onExpandChange :: Option CardOption (EventHandlerOpt)
-onExpandChange = opt "onExpandChange"
-showExpandableButton :: Option CardOption (Boolean)
-showExpandableButton = opt "showExpandableButton"
-style :: Option CardOption (UnknownType)
-style = opt "style" -- object
+raised :: Option CardOption (Boolean)
+raised = opt "raised"
+className :: Option CardOption (String)
+className = opt "className"

@@ -13,9 +13,9 @@ toolbar :: Options ToolbarOption -> Array ReactElement -> ReactElement
 toolbar opts = createElement toolbarClass (toolbarProps opts)
 children :: Option ToolbarOption (Node)
 children = opt "children"
+classes :: Option ToolbarOption (UnknownType)
+classes = opt "classes" -- object
 className :: Option ToolbarOption (String)
 className = opt "className"
-noGutter :: Option ToolbarOption (Boolean)
-noGutter = opt "noGutter"
-style :: Option ToolbarOption (UnknownType)
-style = opt "style" -- object
+disableGutters :: Option ToolbarOption (Boolean)
+disableGutters = opt "disableGutters"

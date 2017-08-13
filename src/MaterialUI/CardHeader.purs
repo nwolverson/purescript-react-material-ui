@@ -11,35 +11,13 @@ cardHeaderProps :: Options CardHeaderOption -> CardHeaderProps
 cardHeaderProps = CardHeaderProps <<< options
 cardHeader :: Options CardHeaderOption -> Array ReactElement -> ReactElement
 cardHeader opts = createElement cardHeaderClass (cardHeaderProps opts)
-actAsExpander :: Option CardHeaderOption (Boolean)
-actAsExpander = opt "actAsExpander"
-avatar :: Option CardHeaderOption (Node)
-avatar = opt "avatar"
-children :: Option CardHeaderOption (Node)
-children = opt "children"
-closeIcon :: Option CardHeaderOption (Node)
-closeIcon = opt "closeIcon"
-expandable :: Option CardHeaderOption (Boolean)
-expandable = opt "expandable"
-iconStyle :: Option CardHeaderOption (UnknownType)
-iconStyle = opt "iconStyle" -- object
-openIcon :: Option CardHeaderOption (Node)
-openIcon = opt "openIcon"
-showExpandableButton :: Option CardHeaderOption (Boolean)
-showExpandableButton = opt "showExpandableButton"
-style :: Option CardHeaderOption (UnknownType)
-style = opt "style" -- object
-subtitle :: Option CardHeaderOption (Node)
-subtitle = opt "subtitle"
-subtitleColor :: Option CardHeaderOption (String)
-subtitleColor = opt "subtitleColor"
-subtitleStyle :: Option CardHeaderOption (UnknownType)
-subtitleStyle = opt "subtitleStyle" -- object
-textStyle :: Option CardHeaderOption (UnknownType)
-textStyle = opt "textStyle" -- object
-title :: Option CardHeaderOption (Node)
-title = opt "title"
-titleColor :: Option CardHeaderOption (String)
-titleColor = opt "titleColor"
-titleStyle :: Option CardHeaderOption (UnknownType)
-titleStyle = opt "titleStyle" -- object
+classes :: Option CardHeaderOption (UnknownType)
+classes = opt "classes" -- Object
+avatar :: Option CardHeaderOption (UnknownType)
+avatar = opt "avatar" -- Element
+className :: Option CardHeaderOption (String)
+className = opt "className"
+subheader :: Option CardHeaderOption (UnknownType)
+subheader = opt "subheader" -- Element
+title :: Option CardHeaderOption (UnknownType)
+title = opt "title" -- Element

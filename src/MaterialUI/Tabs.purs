@@ -11,27 +11,31 @@ tabsProps :: Options TabsOption -> TabsProps
 tabsProps = TabsProps <<< options
 tabs :: Options TabsOption -> Array ReactElement -> ReactElement
 tabs opts = createElement tabsClass (tabsProps opts)
+buttonClassName :: Option TabsOption (String)
+buttonClassName = opt "buttonClassName"
+centered :: Option TabsOption (Boolean)
+centered = opt "centered"
 children :: Option TabsOption (Node)
 children = opt "children"
+classes :: Option TabsOption (UnknownType)
+classes = opt "classes" -- object
 className :: Option TabsOption (String)
 className = opt "className"
-contentContainerClassName :: Option TabsOption (String)
-contentContainerClassName = opt "contentContainerClassName"
-contentContainerStyle :: Option TabsOption (UnknownType)
-contentContainerStyle = opt "contentContainerStyle" -- object
-initialSelectedIndex :: Option TabsOption (Number)
-initialSelectedIndex = opt "initialSelectedIndex"
-inkBarStyle :: Option TabsOption (UnknownType)
-inkBarStyle = opt "inkBarStyle" -- object
+fullWidth :: Option TabsOption (Boolean)
+fullWidth = opt "fullWidth"
+indicatorClassName :: Option TabsOption (String)
+indicatorClassName = opt "indicatorClassName"
+indicatorColor :: Option TabsOption (UnknownType)
+indicatorColor = opt "indicatorColor" -- union
 onChange :: Option TabsOption (EventHandlerOpt)
 onChange = opt "onChange"
-style :: Option TabsOption (UnknownType)
-style = opt "style" -- object
-tabItemContainerStyle :: Option TabsOption (UnknownType)
-tabItemContainerStyle = opt "tabItemContainerStyle" -- object
-tabTemplate :: Option TabsOption (EventHandlerOpt)
-tabTemplate = opt "tabTemplate"
-tabTemplateStyle :: Option TabsOption (UnknownType)
-tabTemplateStyle = opt "tabTemplateStyle" -- object
+scrollable :: Option TabsOption (Boolean)
+scrollable = opt "scrollable"
+scrollButtons :: Option TabsOption (UnknownType)
+scrollButtons = opt "scrollButtons" -- enum
+textColor :: Option TabsOption (UnknownType)
+textColor = opt "textColor" -- union
 value :: Option TabsOption (UnknownType)
 value = opt "value" -- any
+width :: Option TabsOption (String)
+width = opt "width"

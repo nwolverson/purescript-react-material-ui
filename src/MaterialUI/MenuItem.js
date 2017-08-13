@@ -1,3 +1,3 @@
 // module MaterialUI.MenuItem
 
-exports.menuItemClass = require('material-ui/MenuItem/MenuItem').default;
+exports.menuItemClass = require('material-ui/Menu/MenuItem').default;

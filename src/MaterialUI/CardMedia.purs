@@ -11,21 +11,9 @@ cardMediaProps :: Options CardMediaOption -> CardMediaProps
 cardMediaProps = CardMediaProps <<< options
 cardMedia :: Options CardMediaOption -> Array ReactElement -> ReactElement
 cardMedia opts = createElement cardMediaClass (cardMediaProps opts)
-actAsExpander :: Option CardMediaOption (Boolean)
-actAsExpander = opt "actAsExpander"
-children :: Option CardMediaOption (Node)
-children = opt "children"
-expandable :: Option CardMediaOption (Boolean)
-expandable = opt "expandable"
-mediaStyle :: Option CardMediaOption (UnknownType)
-mediaStyle = opt "mediaStyle" -- object
-overlay :: Option CardMediaOption (Node)
-overlay = opt "overlay"
-overlayContainerStyle :: Option CardMediaOption (UnknownType)
-overlayContainerStyle = opt "overlayContainerStyle" -- object
-overlayContentStyle :: Option CardMediaOption (UnknownType)
-overlayContentStyle = opt "overlayContentStyle" -- object
-overlayStyle :: Option CardMediaOption (UnknownType)
-overlayStyle = opt "overlayStyle" -- object
-style :: Option CardMediaOption (UnknownType)
-style = opt "style" -- object
+classes :: Option CardMediaOption (UnknownType)
+classes = opt "classes" -- Object
+className :: Option CardMediaOption (String)
+className = opt "className"
+image :: Option CardMediaOption (String)
+image = opt "image"

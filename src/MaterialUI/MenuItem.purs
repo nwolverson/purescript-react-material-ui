@@ -11,39 +11,15 @@ menuItemProps :: Options MenuItemOption -> MenuItemProps
 menuItemProps = MenuItemProps <<< options
 menuItem :: Options MenuItemOption -> Array ReactElement -> ReactElement
 menuItem opts = createElement menuItemClass (menuItemProps opts)
-anchorOrigin :: Option MenuItemOption (UnknownType)
-anchorOrigin = opt "anchorOrigin" -- custom
-animation :: Option MenuItemOption (EventHandlerOpt)
-animation = opt "animation"
-checked :: Option MenuItemOption (Boolean)
-checked = opt "checked"
-children :: Option MenuItemOption (Node)
-children = opt "children"
-desktop :: Option MenuItemOption (Boolean)
-desktop = opt "desktop"
-disabled :: Option MenuItemOption (Boolean)
-disabled = opt "disabled"
-focusState :: Option MenuItemOption (UnknownType)
-focusState = opt "focusState" -- enum
-innerDivStyle :: Option MenuItemOption (UnknownType)
-innerDivStyle = opt "innerDivStyle" -- object
-insetChildren :: Option MenuItemOption (Boolean)
-insetChildren = opt "insetChildren"
-leftIcon :: Option MenuItemOption (ReactElement)
-leftIcon = opt "leftIcon"
-menuItems :: Option MenuItemOption (Node)
-menuItems = opt "menuItems"
-onClick :: Option MenuItemOption (EventHandlerOpt)
-onClick = opt "onClick"
-primaryText :: Option MenuItemOption (Node)
-primaryText = opt "primaryText"
-rightIcon :: Option MenuItemOption (ReactElement)
-rightIcon = opt "rightIcon"
-secondaryText :: Option MenuItemOption (Node)
-secondaryText = opt "secondaryText"
-style :: Option MenuItemOption (UnknownType)
-style = opt "style" -- object
-targetOrigin :: Option MenuItemOption (UnknownType)
-targetOrigin = opt "targetOrigin" -- custom
-value :: Option MenuItemOption (UnknownType)
-value = opt "value" -- any
+classes :: Option MenuItemOption (UnknownType)
+classes = opt "classes" -- Object
+role :: Option MenuItemOption (String)
+role = opt "role"
+selected :: Option MenuItemOption (Boolean)
+selected = opt "selected"
+children :: Option MenuItemOption (UnknownType)
+children = opt "children" -- Element
+className :: Option MenuItemOption (String)
+className = opt "className"
+component :: Option MenuItemOption (UnknownType)
+component = opt "component" -- union
